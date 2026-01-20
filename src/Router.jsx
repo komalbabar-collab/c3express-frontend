@@ -37,7 +37,7 @@ const DomesticRatefinder = lazy(() => import('./pages/Ratefinder/DomesticRatefin
 const InternationalRatefinder = lazy(() => import('./pages/Ratefinder/InternationalRatefinder'));
 
 // Lazy load service pages
-const DomesticCouriers = lazy(() => import('./pages/services/domestic_couriers'));
+const DomesticCouriers = lazy(() => import('./pages/services/Domestic_couriers'));
 const InternationalCouriers = lazy(() => import('./pages/services/International_couriers'));
 const ImportClearance = lazy(() => import('./pages/services/Import_and_clearance_express'));
 const ExportAirlandSea = lazy(() => import('./pages/services/Export_airland_sea'));
