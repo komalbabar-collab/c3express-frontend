@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+ul {
+    padding: 0;
+}
+
+p {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 23px;
+}
+
+.footer-widget ul.list-arrow li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 4px 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "MyriadPro-Regular", Poppins;
+    color: #FFF;
+}
+
+.footer-widget ul.list-arrow li a,
+.footer-widget ul.list-arrow li:before {
+    color: #fff;
+}
+
+a {
+    color: #000;
+    text-decoration: unset;
+}
+
+
+
+/* gallery tab css */
+
+#portfolio {
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.gallery-title {
+    font-size: 36px;
+    color: #db584e;
+    text-align: center;
+    font-weight: 700;
+    padding: 40px 20px 60px;
+}
+
+.filter-button {
+    font-size: 18px;
+    border: 1px solid #db584e;
+    border-radius: 5px;
+    text-align: center;
+    color: #db584e;
+    margin-bottom: 30px;
+
+}
+
+.filter-button:hover {
+    font-size: 18px;
+    border: 1px solid #db584e;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #db584e;
+
+}
+
+.btn-default:active .filter-button:active {
+    background-color: #db584e;
+    color: white;
+}
+
+.port-image {
+    width: 100%;
+}
+
+.gallery_product {
+    margin-bottom: 30px;
+}
+
+.gallery_product.col-md-4.filter img {
+    width: 43%;
+}
+
+/*end  gallery tab css */
+
+.source-module h2 {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1rem;
+}
+
+.source-module {
+    position: relative;
+}

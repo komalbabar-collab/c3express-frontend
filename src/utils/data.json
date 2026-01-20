@@ -1,0 +1,40 @@
+{
+    "fieldsToReset": [
+        {
+            "value": "AirWayBillNo",
+            "label": "AirWay Bill No"
+        },
+        {
+            "value": "Consignee",
+            "label": "Consignee"
+        },
+        {
+            "value": "ConsigneeCity",
+            "label": "Consignee City"
+        },
+        {
+            "value": "ConsigneeName",
+            "label": "Consignee Name"
+        },
+        {
+            "value": "ConsigneePhone",
+            "label": "Consignee Phone"
+        },
+        {
+            "value": "ServiceType",
+            "label": "ServiceType"
+        },
+        {
+            "value": "Shipper",
+            "label": "Shipper"
+        },
+        {
+            "value": "ShipperPhone",
+            "label": "Shipper Phone"
+        },
+        {
+            "value": "ShipperReference",
+            "label": "Shipper Reference"
+        }
+    ]
+}

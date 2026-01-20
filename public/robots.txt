@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow:
+Sitemap: https://www.c3xpress.com/sitemap.xml

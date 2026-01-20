@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Courier Service Provider in Dubai - C3xpress</title>
+    <link rel="icon" type="image/svg+xml" href="../logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    .p-page_inner h3 {
+        font-size: 24px;
+    }
+
+    .p-inner_head {
+        background-size: cover;
+        position: relative;
+    }
+
+    .p-inner_contact {
+        background-image: url(images/contact.jpg);
+        padding-bottom: 30px;
+    }
+
+    .p-page_title {
+        padding: 16px 0;
+        position: relative;
+        z-index: 9;
+    }
+
+    .p-breadcrumb {
+        float: right;
+        list-style: outside none none;
+        margin: 0;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    .p-breadcrumb li {
+        display: inline-block;
+        font-size: 12px;
+    }
+
+    .p-inner_head:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .75);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .p-breadcrumb li span:before {
+        content: "/";
+        margin: 0 10px 0 8px;
+    }
+
+    .p-breadcrumb li span {
+        font-size: 18px;
+    }
+
+    .p-breadcrumb li a,
+    .p-breadcrumb li span {
+        color: #fff;
+        display: inline-block;
+        font-family: MyriadPro-Regular, Poppins;
+        font-weight: 400;
+    }
+
+    .p-breadcrumb li a {
+        text-decoration: none;
+        color: #2ca2c6;
+        letter-spacing: 1px;
+    }
+
+    .footer_box_cover {
+        background-color: #fff;
+        background-image: url(images/footer.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 371px;
+        padding: 40px 0 0;
+        position: relative;
+    }
+
+    .footer_box_outer {
+        overflow: hidden;
+        padding-top: 0;
+    }
+
+    @media screen and (max-width: 767px) {
+        .footer_box_cover {
+            padding-top: 10px;
+        }
+
+        .footer_box_outer {
+            padding-top: 0;
+        }
+    }
+
+    .footer-menu ul li a:hover {
+        color: #fff;
+    }
+
+    .footer-main {
+        padding: 0;
+    }
+
+    .footer-main p {
+        color: #fff;
+        font-size: 15px;
+    }
+
+    .footer-logo {
+        margin-bottom: 25px;
+    }
+
+    .footer-social {
+        margin-top: 15px;
+    }
+
+    .footer-social ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 0 -13px;
+    }
+
+    .footer-social ul li {
+        display: inline-block;
+    }
+
+    .footer-social ul li:hover {
+        color: #000;
+    }
+
+    .footer-widget ul.list-arrow li:last-child {
+        border-bottom: 0;
+    }
+
+    .footer-widget ul.list-arrow li:hover a,
+    .footer-widget ul.list-arrow li:hover {
+        color: #000;
+    }
+
+    .working-hours {
+        padding-right: 10px;
+        color: #fff;
+    }
+
+    .working-hours .text-right {
+        float: right;
+    }
+
+    .copyright {
+        color: #fff;
+        padding: 25px 0;
+        position: relative;
+        z-index: 1;
+        font-weight: 500;
+        font-size: 13px;
+    }
+
+    .footer-menu ul li a {
+        color: #fff;
+    }
+
+    .footer-menu ul li {
+        display: inline-block;
+        line-height: 12px;
+        padding-left: 15px;
+    }
+
+    .footer-menu ul li a:hover {
+        color: #000;
+    }
+
+    .footer_border {
+        height: 100%;
+        border-right: #fff 1px solid;
+    }
+
+    .footer-menu a {
+        color: #fff;
+    }
+
+    .footer-social ul li {
+        padding: 0 5px;
+    }
+
+    @media (max-width: 767px) {
+        .copyright {
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+
+    footer {
+        background: #63636766;
+    }
+
+    @media screen and (max-width: 761px) {
+        h3.widget-title {
+            font-size: 1.15rem;
+        }
+    }
+
+    .border-top {
+        border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    }
+
+    .footer-widget ul.list-arrow li {
+        border-bottom: 1px solid rgba(255, 255, 255, .07);
+        padding: 4px 0;
+    }
+
+    .footer-widget ul.list-arrow li a,
+    .footer-widget ul.list-arrow li:before {
+        color: #fff;
+        text-decoration: none
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+    @media screen and (max-width: 991px) {
+        .p-page_inner {
+            padding-top: 45px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .p-page_inner {
+            padding-top: 50px;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .p-page_inner {
+            padding-top: 45px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .p-content_section {
+            padding-bottom: 50px;
+        }
+
+        .p-page_inner {
+            padding-top: 50px;
+        }
+    }
+
+    .p-page_inner {
+        padding-top: 50px;
+    }
+
+    .p-content_section {
+        padding-bottom: 70px;
+    }
+
+    .p-blogpage_list_single {
+        margin-bottom: 60px;
+    }
+
+    .p-blog_list_img {
+        border-radius: 4px;
+        margin-bottom: 25px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .p-blog_list_detail h1 {
+        margin-top: 0;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .p-blog_list_detail p {
+        font-size: 15px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .p-side_single {
+        border: 3px dashed #2ca2c6;
+        margin-bottom: -3px;
+        margin-left: auto;
+        max-width: 283px;
+        padding: 22px 15px;
+        position: relative;
+    }
+
+    .p-side_single>h5 {
+        color: #2ca2c6;
+        font-family: MyriadPro-Regular, Poppins;
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .p-side_single>h5:after {
+        background: #2ca2c6;
+        content: "";
+        display: block;
+        height: 2px;
+        margin: auto;
+        position: relative;
+        top: 12px;
+        width: 30px;
+    }
+
+    .p-side_single .p-side_posts {
+        padding-top: 10px;
+    }
+
+    .p-side_single .p-side_posts>.p-side_single_post:last-child {
+        margin-bottom: 0;
+    }
+
+    .p-side_single .p-side_single_post {
+        position: relative;
+        padding-left: 95px;
+        min-height: 82px;
+        margin-bottom: 30px;
+    }
+
+    .p-side_single .p-side_single_post img {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .p-side_single .p-side_blog_text {
+        padding: 15px 0;
+        border-bottom: 1px solid #dbdbdb;
+        border-top: 1px solid #dbdbdb;
+        min-height: 82px;
+    }
+
+    .p-side_single .p-side_blog_text>a {
+        color: #000;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: inline-block;
+        margin-left: 2px;
+    }
+
+    .p-side_single .p-side_blog_text>a:hover {
+        color: #2ca2c6;
+    }
+
+    .p-blog_list_img img {
+        border-radius: 4px;
+        height: auto;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .p-blog_list_img:after {
+        background-color: #ec016099;
+        content: "";
+        display: block;
+        height: 100%;
+        left: -97%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        transition: ease all .3s;
+        -webkit-transition: ease all .3s;
+        -moz-transition: ease all .3s;
+        -o-transition: ease all .3s;
+        -ms-transition: ease all .3s;
+    }
+
+    .p-blogpage_list_single:hover .p-blog_list_img:after {
+        left: 0;
+    }
+
+    .p-sidebar {
+        position: relative;
+    }
+
+    ul.list-arrow {
+        padding-left: 5px;
+        list-style: none;
+    }
+
+    .p-sidebar:after {
+        color: #2d2d2d;
+        content: "";
+        font-family: MyriadPro-Regular, Poppins;
+        font-size: 32px;
+        font-weight: 600;
+        position: absolute;
+        right: 20px;
+        top: -23px;
+        transform: rotate(175deg);
+        transition: all .3s ease 0s;
+        z-index: 37;
+    }
+
+    .p-sidebar:hover:after {
+        right: 66%;
+    }
+
+    .p-blog-snigle .p-blog_list_img:after {
+        display: none;
+    }
+
+    .p-blog_list_detail h1 {
+        color: #000;
+        font-family: MyriadPro-Regular, Poppins;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .p-blogpage_list_single:last-child {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 1179px) {
+        .p-side_single {
+            padding: 15px;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .p-page_inner {
+            padding-top: 45px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .p-content_section {
+            padding-bottom: 50px;
+        }
+
+        .p-page_inner {
+            padding-top: 50px;
+        }
+
+        .p-side_single {
+            margin-right: auto;
+        }
+
+        .p-blogpage_list_single {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 550px;
+        }
+
+        .p-blog_list_img img {
+            height: auto;
+        }
+
+        .p-sidebar:after {
+            display: none;
+        }
+
+        .p-side_single {
+            max-width: 330px;
+        }
+
+        .p-blogpage_list_single:last-child {
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .p-blog_list_detail,
+        .p-blog_list_img {
+            width: 100%;
+            margin: auto;
+        }
+
+        .p-blog_list_detail {
+            margin-top: 15px;
+        }
+    }
+
+    .p-side_single_post .other-service {
+        height: 82px;
+        width: 89px;
+    }
+
+    nav.navbar.navbar-expand-lg.navbar-light {
+        background-color: #2ca2c6;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    img.header-logoo {
+        width: 130px;
+        cursor: pointer;
+    }
+
+    div#navbarNavDropdown li a {
+        color: #000;
+        font-size: 17px;
+        text-transform: uppercase;
+        margin-right: 0;
+        letter-spacing: 0px;
+        text-decoration: unset;
+        font-family: MyriadPro-Regular, Poppins;
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: end;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img class="header-logoo" src="images/footerlogo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about-us">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Ourservices">SERVICES & PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Career">CAREERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../OurGallery">MEDIA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact-us">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Deliveryservice">DELIVERY SERVICES</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="p-inner_head p-inner_contact mb-5">
+        <div class="p-page_title">
+            <div class="container">
+                <ul class="p-breadcrumb">
+                    <li><a href="/services/domestic-parcel-service-in-dubai">Home</a></li>
+                    <li><span>International Couriers
+                        </span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="p-page_inner">
+            <div class="container p-content_section p-blog-snigle">
+                <div class="row clearfix">
+                    <div class="col-md-8 col-lg-8 p-blog_listing">
+                        <div class="p-blogpage_list_single clearfix">
+                            <div class="p-blog_list_img"><img src="images/international.jpg" class="img-fluid" alt="">
+                            </div>
+                            <p dir="ltr"><span><strong>Delivering Beyond Borders with
+                                        Precision</strong><br></span><span><br></span><span>When speed meets precision
+                                    and global logistics demand excellence, C3X International Couriers ensures your
+                                    success takes flight without delay.</span><span> </span><span>Whether it’s a
+                                    critical document or a shipment vital to your production line, you need a courier
+                                    partner who transcends the ordinary. Enter C3X international couriers, your trusted
+                                    companion for seamless, reliable, and efficient global logistics.</span></p>
+                            <p dir="ltr"><span>We’re not just about delivering packages; we’re about bridging the gap
+                                    between businesses and their global ambitions. As a trusted
+                                </span><strong>International Courier Service Provider in Dubai</strong><span>, we ensure
+                                    that your shipments don’t just travel—they arrive with precision, care, and the
+                                    local expertise that only we can provide.</span></p>
+                            <h3 dir="ltr"><span>Why C3X? Because Every Shipment Deserves More</span></h3>
+                            <h4 dir="ltr"><span>Door-to-Door Priority Deliveries</span></h4>
+                            <p dir="ltr"><span>Your time matters. That’s why we specialize in priority door-to-door
+                                    deliveries that ensure your package reaches its destination quickly and without
+                                    hassle. Be it an urgent business contract or a crucial production component, we
+                                    handle every shipment with the urgency it deserves, so you never miss a beat.</span>
+                            </p>
+                            <h4 dir="ltr"><span>Global Reach Meets Local Expertise</span></h4>
+                            <p dir="ltr"><span>At C3X, we combine an expansive international network with unmatched
+                                    local knowledge. As a leading </span><strong>international delivery
+                                    service</strong><span>, our team ensures your shipments are handled with finesse,
+                                    navigating diverse regions with ease. Your packages don’t just get delivered—they’re
+                                    strategically placed with care and precision.</span></p>
+                            <h3 dir="ltr"><span>Real-Time Tracking You Can Trust</span></h3>
+                            <p dir="ltr"><span>Stay in control with real-time tracking and proof of delivery. Our
+                                    advanced systems keep you updated at every step, giving you complete visibility and
+                                    peace of mind. With C3X, you’re always in the loop, knowing your shipments are safe
+                                    and on time.</span></p>
+                            <h3 dir="ltr"><span>Dubai’s Premier International Courier Partner</span></h3>
+                            <p dir="ltr"><span>As a </span><strong>best international parcel service</strong><span>, we
+                                    reflect the city’s innovative and dynamic spirit. Rooted in one of the world’s most
+                                    vibrant business hubs, we go beyond traditional courier services to act as your
+                                    strategic partner in global expansion.</span></p>
+                            <p dir="ltr"><span>Whether you’re a growing startup or an established enterprise, our
+                                    expertise aligns with your goals, helping you navigate international markets with
+                                    ease. With C3X, Dubai meets the world—and so does your business.</span><b></b></p>
+                            <h3 dir="ltr"><span>What Sets Us Apart:</span></h3>
+                            <ul>
+                                <li dir="ltr" aria-level="1">
+                                    <p dir="ltr" role="presentation"><strong>Tailored
+                                            Solutions</strong><span><strong>:</strong> We understand that every shipment
+                                            is unique. From sensitive documents to fragile goods, we create customized
+                                            solutions that cater to your specific needs.</span></p>
+                                </li>
+                                <li dir="ltr" aria-level="1">
+                                    <p dir="ltr" role="presentation"><strong>Reliability and
+                                            Speed</strong><span><strong>:</strong> Our commitment to efficiency ensures
+                                            that your shipments arrive on time, every time.</span></p>
+                                </li>
+                                <li dir="ltr" aria-level="1">
+                                    <p dir="ltr" role="presentation"><strong>Seamless Global
+                                            Connectivity</strong><span><strong>:</strong> With a vast international
+                                            network and local expertise, we connect you to the world
+                                            effortlessly.</span></p>
+                                </li>
+                                <li dir="ltr" aria-level="1">
+                                    <p dir="ltr" role="presentation"><strong>Transparency You Can Count
+                                            On</strong><span><strong>:</strong> Real-time tracking and proof of delivery
+                                            ensure you’re always in control of your shipments.</span></p>
+                                </li>
+                            </ul>
+                            <h3 dir="ltr"><span>A Strategic Partnership</span></h3>
+                            <p dir="ltr"><span>At C3X, we don’t just deliver packages; we deliver possibilities. Our
+                                    services are more than just logistics—they’re a strategic collaboration that
+                                    empowers your business to thrive in a global landscape. From tailored shipping
+                                    options to expert handling and real-time insights, we ensure that your logistics
+                                    experience is effortless and impactful.</span></p>
+                            <p dir="ltr"><span>With C3X, your international courier needs are in trusted
+                                    hands.</span><b></b></p>
+                            <h3 dir="ltr"><span>C3X, Your Global Logistics Ally</span></h3>
+                            <p dir="ltr"><span>In a world where opportunities span continents, C3X is the bridge that
+                                    connects you to success. As the preferred </span><strong>international courier
+                                    services in Dubai</strong><span> </span><span>, we bring together priority
+                                    door-to-door deliveries, unmatched transparency, and local expertise to redefine
+                                    what it means to deliver globally.</span></p>
+                            <p dir="ltr"><span>When you choose C3X, you’re choosing more than a courier—you’re choosing
+                                    a partner dedicated to precision, reliability, and excellence. Let us bring the
+                                    world to your doorstep, one package at a time.</span></p>
+                            <p dir="ltr"><strong>C3X International Couriers: Where Global Connectivity Meets Local
+                                    Expertise.</strong></p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 p-sidebar">
+                        <div class="p-side_single">
+                            <h5>Other services &amp; products</h5>
+                            <div class="p-side_posts">
+                                <div class="p-side_single_post"><img src="images/domestic_courier.jpg"
+                                        class="img-fluid other-service" alt="">
+                                    <div class="p-side_blog_text"><a
+                                            href="domestic-parcel-service-in-dubai.html">Domestic
+                                            Couriers</a></div>
+                                </div>
+                                <div class="p-side_single_post"><img src="images/import.jpg"
+                                        class="img-fluid other-service" alt="">
+                                    <div class="p-side_blog_text"><a
+                                            href="import-customs-clearance-in-dubai.html">Import and Clearance </a>
+                                    </div>
+                                </div>
+                                <div class="p-side_single_post"><img src="images/sea.jpg"
+                                        class="img-fluid other-service" alt="">
+                                    <div class="p-side_blog_text"><a
+                                            href="international-shipping-by-land-sea-air.html">Export Air,
+                                            Land &amp; Sea</a></div>
+                                </div>
+                                <div class="p-side_single_post"><img src="images/delivery.jpg"
+                                        class="img-fluid other-service" alt="">
+                                    <div class="p-side_blog_text"><a
+                                            href="ecommerce-delivery-service-in-dubai.html">E-commerce
+                                            Delivery</a></div>
+                                </div>
+                                <div class="p-side_single_post"><img src="images/fullfilment.jpg"
+                                        class="img-fluid other-service" alt="">
+                                    <div class="p-side_blog_text"><a
+                                            href="ecommerce-fulfilment-service-in-dubai.html">E-Commerce
+                                            Fulfilment</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer_box_outer">
+        <div class="footer_box_cover">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 col-md-6 footer-widget footer-about footer_border"><img loading="lazy"
+                                width="100px" class="footer-logo" src="images/footerlogo.png" alt="Constra">
+                            <p>Feel free to contact us with any questions regarding C3X makes deliveries happen faster
+                                for businesses and consumers. We`ve developed a unique same-day and next-day delivery
+                                network positioned to enhance the speed and flexibility of last-mile delivery. We help
+                                consumers send international parcels more cost-effectively.</p>
+                            <div class="footer-social text-center mb-3">
+                                <ul>
+                                    <li><a href="#" aria-label="Twitter"><img
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAhNAAAITQEhiCGBAAAB40lEQVRYhc1XC3HDMAx9K4GVwcJggRAGK4RCyBgUQiEEQoZggZAxyBikCLRTJ9+pqWXLuXad7nStE32eFNmSn4gITqoA7AA0AGoALwu1bwAjgAFAD2DymPUAYIctgDdZn5SjpRwDe5b1B4BjRO6SGIDBWyLq6ZdmIuqIqE7IB65FdhbdXmxF5VNGgoEuZSATQKcCiIKPKe5EgblZ4Thl7wqEFbmJeCWbdpcpu4fzWHDbGIBQcLdIe+pzhLq6ANAsX9yROx2ojn5eWe2lXKntCf0gFX2VAcfRTGJnkFSH86CKyIcsVLxoZZEqvAMRjQaImmzqBIyls9fpT6VyEIUpUqTHBAALNMRnv5Hze8z0g15+uQF9inwrulWmj8zGu/GsK0gPmQy06mguoZRN9kmbTOSBdJfz0skj5wXQFTpHtg0XAmBj74UAXKA3Msk0DlmrmGL0pQrXouYs59yGni0XyNvMztvQexBdVW+C9g4bFwdR7iiuJPIhsxWngiDCUbwND3LNKIAYI+nunVFrW6SbEf5DO9YvYs3jVmwOJPjDkWyyRjI8eiiNCd/icxSN5RrEpL5XbKrxVHuoK3OLpgzomw2tuJppPXOce/jltPR6zk74is7/XxfvuQHxlZybEHO+eQH4Ab/0cCx7e0MYAAAAAElFTkSuQmCC"></a>
+                                    </li>
+                                    <li><a href="https://www.facebook.com/c3xpress" aria-label="Facebook"><img
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAhNAAAITQEhiCGBAAAB5UlEQVRYhcVX0XHCMAx9zfFPNqg3aEZIJ2g2KCMwAiMwQtgg3YBuABuEDdIJ1BOVe8LYxnYpeXe+g0T2e7JkWXkiIiTCAOgAtAAaAM/OtBOAA4A9gAHAmLJsigAmXAN4k/9fisi1Y2FL+f8BYOuxuwQLCIyaiAb6wUREPRE1EXs7GrGdZO4ga3ntY4vYBfrYAjcc6JUDXvG+iZ1M4NEWEMfWuxIR8jyouHAE13W37D/Ifc7VPgE24e6x7bFw2Ly6ENC6LxK82dM1Uub22lHt/ZSY7bU6IS5SBBh1PKEfpHq/CpBTRijsLphKyiukaqXAODZHAK8yUmG52oWUUFteS7C+WW6vcRDObiH1O4WcPV+JYA39bJMpwkBisUmIWxuJfW4OQDipKtx2H75KJi0ybCcAnxIK3Qsc5V1RDuXswEFi3TvP16pnKBJw8iTWI8Ccx0o8a2YQwJxjJWd4+WARtnUbKmkgURrDQlius4BRGkguyfUDyPkUvQvnZE/BVrYk9T74C2y1PHPZOsB5sBNlgwqLD27dT+r/BZ1w7H7XmaElG0MtGeZuSn3G3R3Is9pyLWJUnZIpIDaq8xlzPkx0TvTqqs39NNPzgr3m7B+nuZ/nTMJHiX+/OO/5WuYjaY8xX9FxAPgGB8xGIpJbH54AAAAASUVORK5CYII="></a>
+                                    </li>
+                                    <li><a href="https://www.instagram.com/c3x_couriers/" aria-label="Github"><img
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAhNAAAITQEhiCGBAAACXUlEQVRYhcVX7XHbMAx98fl/tEG4gbWB1QnCTFBvUG9QZQNnA3WCKhvIGygT1N1AnYA9uI8JwpAS6WsS3OEkkvgi+QCSV845ZJIBYAE0AGoAN4HabwAjgAFAD+CUYzYnAHG4B3DL9h/lKJSTwK7ZfgRwiMi9JgkgwZVzrnf/aHLOdc65ekbec03Zibo9bUXl54x4A92cgYUJdGoC0eBjipYKws0FjufsvQkiNfNkxBdy0m64ZO/hPDa55y3VWdAT6V8SyK2I8hySLJkicpLGPwH8ALA79zCSRgEuFn3ryqlN2PLAbPQK9MxjE4m8BfAdwBPzeqnAGNaNDYB76ofjv1gnrERkZmZfcWwsSMUdZUfqxvT8Khhp7NmIAc9yzCZA1ZJr5dzxu9NLHdE9y4GValrYe21EZjREEDFwbBfgap+wLT77NZE9ZqLb42WrMAHu+VZhSVOVsCM+zYqn2vyB8UK1ci7/Hblh37YgVcXnZpUp7Mnyewj6J9Vn36qlqTQA7fC/UGkAfqv2kTHf15cYXPEmEwJnLoAj93rgclsCasOxXECfcbOmQm4AoEOfCVvVf0zsf2q7BKzDmjO5TaSjb+tUmhiwVYjvI7omsBE6vz7rLZRiP1ZSilFQiqs1D5dHzqgKlkzGHgB840q1GRlQUc4fRqG8rMxX+pxyj+PDex/HYEWTyO4SqWS4d0uVbiTHju3kheQjr2QnjYu5e9uHX0pjwrF7QCkXXct1ECcFTHOBY6MAdyp5mGhMdArVpU8zrZesIZ/+OC19nvsSLP9SaDTJhURST1JYePnIBvAXLSXo2wuFBG0AAAAASUVORK5CYII="></a>
+                                    </li>
+                                    <li><a href="https://www.linkedin.com/company/c3x-couriers"
+                                            aria-label="Instagram"><img
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAhNAAAITQEhiCGBAAAB2UlEQVRYhcVX7XHCMAx99fGfbFBvQEbIBmSDMgIjwAaMkG6QbMAIsEG6QTqBOFHlKlzbicEF3enOjvXxZCuy/EZEmEkWQA2gAlACeHfUvgCcABwBtAD6OWbnAGCHWwBrmX8rR64cA1vKvANw8MjdEgMIcEFELf3QQEQNEZUR+ZFLkR1EtxVbXvmYkdFAEzMwEUCjAvCC9ynWosBc3eE4Zu8PiFDkQcR3ctCuu2X/4dwXXOEDMCZcjm2PHceYVzcAKnfBw4dMO9PoQHX0QyTbJ7M5ga36PWGkwq2leg2BchEvJmnEFfJTfFpGtBVEU5FtMiZnKT43XIpbKaPFg5EVUorn7thwlSOinoiOE4g17TzfGmc+J1fY58nIrfboGX8486XYjO0qr6/Mg441dcIaRD2ltMjkfA9gJ+NBXcl2SjHXDugjPKUoGulkqkxAUoh9no0gLvPZnU3sszeyfcsngxhbt9ZICYb0fc+i0Ve7kNrcyS9TBO6DvRofPd90B9woGV99sVI3uquvhOs4F3uvY71Qv6IhwRNbsj7UkuHVTalPOMdxJLXlGkSvzsve4diqvOpTHiY6J/Q9n/o003rBl9XLH6epz3N2wgWLxytn/SwFiStrrMH9JQAXqaH+uczSg5EAAAAASUVORK5CYII="></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-6">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-6 mt-5 footer-widget mt-f-30">
+                                    <h3 class="widget-title">Services</h3>
+                                    <ul class="list-arrow">
+                                        <li><a href="/services/international-shipping-by-land-sea-air.html">Export Air,
+                                                Land &amp; Sea</a></li>
+                                        <li><a href="/services/ecommerce-fulfilment-service-in-dubai.html">E-Commerce
+                                                Fulfilment</a></li>
+                                        <li><a href="/services/ecommerce-delivery-service-in-dubai.html">E-commerce
+                                                Delivery</a></li>
+                                        <li><a href="/services/import-customs-clearance-in-dubai.html">Import and
+                                                Clearance</a></li>
+                                        <li><a href="/services/international-courier-service-provider-in-dubai.html">International
+                                                Couriers</a></li>
+                                        <li><a href="/services/domestic-parcel-service-in-dubai.html">Domestic
+                                                Couriers</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-7 col-md-6 footer-widget mt-5 mt-f-30">
+                                    <h3 class="widget-title  ">Working Hours</h3>
+                                    <div class="working-hours">We work 6 days a week, every day excluding major
+                                        holidays. Contact us if you have an emergency, with our Hotline and Contact
+                                        form.<br><br> Monday - Saturday: <span class="text-right">08:00 am - 06:00 pm
+                                        </span><img class="mt-4" src="images/bankimgaesbg.png" alt=""
+                                            style="width: 220px; background: white; padding: 2px 5px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-top"></div>
+                <div class="container">
+                    <div class="copyright ">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="copyright-info"><span>Copyright © 2023 C3X. All Rights Reserved.</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="footer-menu text-center text-md-right">
+                                    <ul class="list-unstyled">
+                                        <li><a href="/Termsconditions">Terms &amp; Conditions</a></li>
+                                        <li><a href="/Privacypolicy">Privacy Policy</a></li>
+                                        <li><a href="/Contact">Contact</a></li>
+                                        <li><a href="/Career">Careers</a></li>
+                                        <li>
+                                            <a href="/Blog">Blog</a>
+                                          </li>
+                                        <li><a href="/Helpdesk">Help Desk</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a class="webwhat" href="https://api.whatsapp.com/send?phone=971600504030"><img title="ChatX"
+            src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="Whats app"
+            style="height: 7%; position: fixed; bottom: 15px; left: 10px; z-index: 9999999;"> </a>
+</body>
+
+</html>

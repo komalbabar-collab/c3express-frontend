@@ -1,0 +1,36 @@
+.tracking-table .date-header {
+    background-color: #e7e7e7;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tracking-table .log-entry {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.log-time {
+    text-align: center;
+}
+
+.log-location {
+    text-align: center;
+}
+
+.datee {
+    color: #28337a;
+    font-size: 14px;
+    text-align: left;
+}
+
+.locationss {
+    color: #28337a;
+    font-size: 14px;
+}
+
+.timeee {
+    color: #28337a;
+    font-size: 14px;
+}
