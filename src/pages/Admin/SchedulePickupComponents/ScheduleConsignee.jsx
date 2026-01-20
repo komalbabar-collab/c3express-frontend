@@ -9,7 +9,7 @@ import useFormSubmission from "../../../hooks/useFormSubmission";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { useHadleChangeBookingDataPhoneNo } from "../../../hooks/useHadleChangePhoneNo";
-import SavedReciversAddessress from "../../../Components/ManageAddrees/SavedReciversAddessress";
+import SavedReciversAddessress from "../../../Components/ManageAddrees/SavedReciversAddessress/Index";
 const ScheduleConsignee = ({
   formData,
   handleChange,
