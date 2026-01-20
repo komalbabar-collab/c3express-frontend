@@ -4,7 +4,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import first from "../assets/images/clients/a.jpg";
 import second from "../assets/images/clients/b.jpg";
 import third from "../assets/images/clients/c.jpg";
-import fourth from "../assets/images/clients/d.jpg";
+import fourth from "../assets/images/clients/D.jpg";
 import fifth from "../assets/images/clients/e.jpg";
 import six from "../assets/images/clients/f.jpg";
 import seven from "../assets/images/clients/g.jpg";
