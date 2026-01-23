@@ -58,7 +58,7 @@ const SingleTracking = () => {
     };
     return (
         <form
-            className="form-inline for_form"
+            className="form-inline "
             method="post"
             encType="multipart/form-data"
             onSubmit={handleSubmit}
@@ -109,7 +109,7 @@ const SingleTracking = () => {
             </div>
             <div className="col-md-3">
                 <button onClick={handleSubmit} type="submit" className=" btn btn-tracking w-100 mt-3">
-                    Track Now
+                    Track
                     <i className="fa fa-arrow-right" />
                 </button>
             </div>

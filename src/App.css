@@ -1144,7 +1144,9 @@ a.btn.btn-service {
 .banner_cover {
     position: relative;
 }
-
+.banner_item{
+    
+}
 .banner_item::after {
     content: "";
     display: block;
@@ -1280,11 +1282,13 @@ a:hover {
 
 /*! CSS Used from: https://c3xpress.com/assets/customer/css/style.css */
 .round-cornner_cs3 {
-    width: 100%;
+    /* width: 100%; */
+    width:50%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 6px;
     background: rgb(63, 110, 222);
     background: linear-gradient(90deg, rgba(63, 110, 222, 1) 0%, rgba(45, 158, 200, 1) 100%);
+    border:1px solid #2ca2c6
 }
 
 .for_form {
@@ -1318,7 +1322,8 @@ a:hover {
     padding: 12px 4px;
     background: 0 0;
     display: block;
-    max-height: 100px;
+    /* max-height: 100px; */
+    min-height: 50px !important;
     color: #ddd;
 }
 
@@ -1416,8 +1421,8 @@ a:hover {
 
 
 button.btn.btn-tracking {
-    border-color: #FEFEFE;
-    border-radius: 40px;
+    /* border-color: #FEFEFE; */
+    /* border-radius: 40px; */
     color: #fff;
     padding-right: 2rem;
     padding-left: 2rem;
@@ -2162,7 +2167,7 @@ img.blog-img-sd {
 
 
 .contact_page_cover {
-    background-image: url("../src/assets/images/contact_page_bg.jpg");
+    /* background-image: url("../src/assets/images/contact_page_bg.jpg"); */
     background-size: cover;
 }
 
@@ -5086,4 +5091,51 @@ a.red-ores {
 
 .react-datepicker-wrapper {
     width: -webkit-fill-available;
+}
+
+
+/* new Form UI  */
+.tracking-tabs {
+  border-bottom: 2px solid #ddd;
+}
+
+.tab-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+  color: #555;
+}
+
+.tab-item.active {
+  /* border-color: #0d6efd; */
+  color: #0d6efd;
+  background-color:#edeeee;
+  border-radius:3px;
+  border-color:#dbdbdb;
+
+}
+
+.tracking-tabs {
+background-color : #dbdbdb;
+border-radius : 5px;
+}
+
+.form-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-group {
+    gap:10px;
+}
+
+.md-input-wrapper input {
+    font-size:smaller !important;
+}
+
+.md-form-control {
+  overflow: hidden;       /* hides scrollbar */
+  resize: none;          /* optional: disables resize handle */
 }

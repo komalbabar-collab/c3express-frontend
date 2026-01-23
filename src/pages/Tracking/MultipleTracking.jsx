@@ -55,24 +55,25 @@ const MultipleTracking = () => {
   };
   return (
     <form
-      className="form-inline for_form "
+      className="form-inline  "
       method="post"
       encType="multipart/form-data"
       onSubmit={handleSubmit}
     >
-      <div className="col-md-5 md-input-wrapper form-group for_form_input">
+      <div className="col-md-6 md-input-wrapper form-group for_form_input">
         <textarea
           className="md-form-control"
           name="airWayBillNo"
           id="airWayBillNo"
           value={TrackingData.airWayBillNo}
           onChange={handleChange}
-          placeholder="Please enter reference numbers,one per line"
+          placeholder="Enter reference no. ,one per line"
           required=""
           defaultValue={""}
+          rows={1}
         />
       </div>
-      <div className="col-md-4 md-input-wrapper form-group for_form_input">
+      <div className="col-md-3 md-input-wrapper form-group for_form_input">
         <select
           className="md-form-control"
           name="trackingType"
@@ -106,7 +107,7 @@ const MultipleTracking = () => {
       </div>
       <div className="col-md-3">
         <button onClick={handleSubmit} className="btn btn-tracking w-100 mt-3">
-          Track Now
+          Track 
           <i className="fa fa-arrow-right" />
         </button>
       </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import banne from "../assets/slow.mp4";
+import banne from "../assets/v3.mp4";
 import SingleTracking from "./Tracking/SingleTracking";
 import MultipleTracking from "./Tracking/MultipleTracking";
 import TrackingDetails from "./Tracking/TrackingDetails";
@@ -34,47 +34,72 @@ const Banner = (props) => {
       <div className="banner_cover">
         <div>
           <div className="banner_item item" id="trackingshipment">
-            <video muted autoPlay loop className="img-fluid" style={{ width: '100%' }} src={banne} alt="" />
+            <video muted autoPlay loop className="img-fluid" style={{ width: '100%', height: '100%'}} src={banne} alt="" />
             <div className="container">
               <div className="banner_content">
                 <h3>welcome to</h3>
                 <h2>c3x couriers</h2>
-                <h3>COURIER, CARGO &amp; CUSTOMER  Care—Now 3X Better!</h3>
-                <div className="round-cornner_cs3 mt-lg-5">
-                  {SingleChange && <SingleTracking />}
-                  {MultipleChange && <MultipleTracking />}
+                <h3>COURIER, CARGO &amp; CUSTOMER EXPERIENCE—Now 3X Better!</h3>
+                <div class="form-box">
+                  <div className="round-cornner_cs3 mt-lg-5">
+                        {/* Tabs */}
+                        <div className="tracking-tabs d-flex">
+                          <div className={`tab-item ${SingleChange ? "active" : ""}`}
+                            onClick={() => {
+                              setSingleChange(true);
+                              setMultipleChange(false);
+                            }}
+                          >
+                            Single Tracking Number
+                          </div>
 
-                  {SingleChange ? (
-                    <div className="form-inline for_form1 col-md-12 text-left" style={{ paddingBottom: '30px' }}>
-                      <a
-                        style={{ cursor: "pointer" }}
-                        onClick={() => {
-                          setSingleChange(false);
-                          setMultipleChange(true);
-                        }}
-                        className="multiple-link-awb"
-                        id="trackform-label1"
-                      >
-                        Multiple tracking numbers{" "}
-                      </a>
-                    </div>
-                  ) : (
-                    <div className="form-inline for_form1 col-md-12 text-left" style={{ paddingBottom: '30px' }}>
-                      <a
-                        style={{ cursor: "pointer" }}
-                        onClick={() => {
-                          setSingleChange(true);
-                          setMultipleChange(false);
-                        }}
-                        className="multiple-link-awb"
-                        id="trackform-label1"
-                      >
-                        Single tracking number{" "}
-                      </a>
-                    </div>
-                  )}
+                          <div className={`tab-item ${MultipleChange ? "active" : ""}`}
+                            onClick={() => {
+                              setSingleChange(false);
+                              setMultipleChange(true);
+                            }}
+                          >
+                            Multiple Tracking Numbers
+                          </div>
+                        </div>
+
+                      {/* Tab Content */}
+
+                      {SingleChange && <SingleTracking />}
+                      {MultipleChange && <MultipleTracking />}
+
+                      {SingleChange ? (
+                        <div className="form-inline for_form1 col-md-12 text-left" style={{ paddingBottom: '30px' }}>
+                          <a
+                            style={{ cursor: "pointer" }}
+                            onClick={() => {
+                              setSingleChange(false);
+                              setMultipleChange(true);
+                            }}
+                            className="multiple-link-awb"
+                            id="trackform-label1"
+                          >
+                            {/* Multiple tracking numbers{" "} */}
+                          </a>
+                        </div>
+                      ) : (
+                        <div className="form-inline for_form1 col-md-12 text-left" style={{ paddingBottom: '30px' }}>
+                          <a
+                            style={{ cursor: "pointer" }}
+                            onClick={() => {
+                              setSingleChange(true);
+                              setMultipleChange(false);
+                            }}
+                            className="multiple-link-awb"
+                            id="trackform-label1"
+                          >
+                            {/* Single tracking number{" "} */}
+                          </a>
+                        </div>
+                      )}
+                  </div>
                 </div>
-                <div className="text-center mtrsp-30">
+                <div className="mtrsp-30 form-box btn-group">
                   <button
                     onClick={() => navigate("/Ratefinder")}
                     type="button "
