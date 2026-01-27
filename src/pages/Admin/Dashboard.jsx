@@ -130,362 +130,156 @@ const Dashboard = () => {
             <div className="container-fluid">
               <div className="card customcss">
                 <div className="card-body">
-                  <div className="row mb-4">
-                    <div>
-                      <div className="row dashboard-head m-0 d-flex mb-2 ">
-                        <div
-                          className="col-lg-3 ds-head"
-                          style={{ color: "black" }}
-                        >
-                          <h5 style={{ color: " #2ca2c6" }}>
-                            Dashboard{" "}
-                            <svg
-                              width={8}
-                              height={6}
-                              viewBox="0 0 8 6"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M1 1L3.21411 3.21411L1.16982 5.29609"
-                                stroke="#DC6C09"
-                                strokeLinecap="round"
-                              />
-                              <path
-                                d="M4.66797 1L6.88208 3.21411L4.83779 5.29609"
-                                stroke="#DC6C09"
-                                strokeLinecap="round"
-                              />
+                  {/* part 1 */}
+                  <div className="dashboard-header-card mb-4">
+                    <div className="row g-3 align-items-center">
+
+                      <div className="col-12 col-lg-4">
+                        <div className="dashboard-title">
+                          <span className="breadcrumb-text">
+                            Dashboard
+                            <svg width="10" height="8" viewBox="0 0 8 6" className="mx-1">
+                              <path d="M1 1L3.21411 3.21411L1.16982 5.29609" stroke="#DC6C09" strokeLinecap="round" />
+                              <path d="M4.66797 1L6.88208 3.21411L4.83779 5.29609" stroke="#DC6C09" strokeLinecap="round" />
                             </svg>
-                          </h5>
-                          <h3 style={{ color: "black" }}>Summary Analytics</h3>
-                        </div>
-                        <div className="col-lg-9 date-filter">
-                          <div className="row">
-                            <div className="col-lg-3 text-center mt-4">
-                              <h3
-                                style={{
-                                  fontSize: "16px",
-                                  color: "#024CA7",
-                                  fontWeight: 600,
-                                }}
-                              >
-                                <svg
-                                  width={26}
-                                  height={22}
-                                  viewBox="0 0 26 22"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <rect
-                                    x="0.632812"
-                                    y="17.2316"
-                                    width="24.5492"
-                                    height="1.5"
-                                    fill="#024CA7"
-                                  />
-                                  <rect
-                                    x="0.632812"
-                                    y="3.21021"
-                                    width="24.5492"
-                                    height="1.5"
-                                    fill="#024CA7"
-                                  />
-                                  <rect
-                                    x="0.632812"
-                                    y="9.98328"
-                                    width="24.5492"
-                                    height="1.5"
-                                    fill="#024CA7"
-                                  />
-                                  <circle
-                                    cx="18.1709"
-                                    cy="3.96019"
-                                    r="2.82713"
-                                    fill="#024CA7"
-                                    stroke="white"
-                                  />
-                                  <circle
-                                    cx="7.83299"
-                                    cy="10.7333"
-                                    r="2.82713"
-                                    fill="#024CA7"
-                                    stroke="white"
-                                  />
-                                  <circle
-                                    cx="18.1709"
-                                    cy="17.9816"
-                                    r="2.82713"
-                                    fill="#024CA7"
-                                    stroke="white"
-                                  />
-                                </svg>{" "}
-                                Date Filter
-                              </h3>
-                            </div>
-                            <div className="col-lg-9 date-main ">
-                              <form
-                                className="form-date-filter d-flex p-2"
-                                id="dashboardFliter"
-                                method="POST"
-                                style={{
-                                  boxShadow: "4px 4px 21px rgba(76,64,247,.2)",
-                                  borderRadius: "10px",
-                                }}
-                              >
-                                <div>
-                                  <label
-                                    htmlFor="from-date"
-                                    className="w-50 p-1"
-                                    style={{ fontSize: "13px" }}
-                                  >
-                                    From Date
-                                  </label>
-                                  {/* <input
-                                    type="date"
-                                    onKeyDown={(e) => e.preventDefault()}
-                                    id="from-date"
-                                    style={{
-                                      marginRight: "5px",
-                                      border: "none",
-                                      width: "80%",
-                                    }}
-                                    name="FromDate"
-                                    value={AccountDayWiseShipments.formData.FromDate}
-                                    onChange={handleChange}
-                                  />
-                                   */}
-
-                                  <ReactDatePicker
-                                    name="FromDate"
-                                    value={AccountDayWiseShipments.formData.FromDate}
-                                    onChange={(e) => {
-                                      AccountDayWiseShipments.setFormData(prev => ({ ...prev, ["FromDate"]: moment(e).format("YYYY-MM-DD") }));
-                                      PickupSummaryForAccounts.setFormData(prev => ({ ...prev, ["FromDate"]: moment(e).format("YYYY-MM-DD") }));
-                                      DeliveryDetailsForAccounts.setFormData(prev => ({ ...prev, ["FromDate"]: moment(e).format("YYYY-MM-DD") }));
-                                      DailyPickupDetailsForAccounts.setFormData(prev => ({ ...prev, ["FromDate"]: moment(e).format("YYYY-MM-DD") }));
-                                    }}
-                                    className="form-control"
-                                    id="from-date"
-                                    onKeyDown={(e) => e.preventDefault()}
-                                    maxDate={new Date()}
-                                    dateFormat="dd/MM/yyyy"
-                                    placeholderText="Select Date"
-                                    showYearDropdown
-                                    showMonthDropdown
-                                    dropdownMode="select"
-                                    showIcon
-                                    filterDate={isWeekday}
-                                  />
-                                </div>
-                                <div className="">
-                                  <label
-                                    htmlFor="to-date"
-                                    className="w-100 p-1 ml-1"
-                                    style={{ fontSize: "13px" }}
-                                  >
-                                    To Date
-                                  </label>
-                                  {/* <input
-                                    type="date"
-                                    onKeyDown={(e) => e.preventDefault()}
-                                    id="to-date"
-                                    name="ToDate"
-                                    value={AccountDayWiseShipments.formData.ToDate}
-                                    onChange={handleChange}
-                                    style={{
-                                      marginRight: "3px",
-                                      border: "none",
-                                      width: "80%",
-                                    }}
-
-                                  /> */}
-
-                                  <ReactDatePicker
-                                    name="ToDate"
-                                    value={AccountDayWiseShipments.formData.ToDate}
-                                    onChange={(e) => {
-                                      AccountDayWiseShipments.setFormData(prev => ({ ...prev, ["FromDate"]: moment(e).format("YYYY-MM-DD") }));
-                                      PickupSummaryForAccounts.setFormData(prev => ({ ...prev, ["FromDate"]: moment(e).format("YYYY-MM-DD") }));
-                                      DeliveryDetailsForAccounts.setFormData(prev => ({ ...prev, ["FromDate"]: moment(e).format("YYYY-MM-DD") }));
-                                      DailyPickupDetailsForAccounts.setFormData(prev => ({ ...prev, ["FromDate"]: moment(e).format("YYYY-MM-DD") }));
-                                    }}
-                                    className="form-control"
-                                    onKeyDown={(e) => e.preventDefault()}
-                                    maxDate={new Date()}
-                                    dateFormat="dd/MM/yyyy"
-                                    placeholderText="Select Date"
-                                    showYearDropdown
-                                    showMonthDropdown
-                                    dropdownMode="select"
-                                    showIcon
-                                    filterDate={isWeekday}
-                                    minDate={AccountDayWiseShipments.formData.FromDate}
-                                  />
-                                </div>
-
-                                {
-                                  userData.data && userData.data.data.user.Role === "Admin" && <div className="">
-                                    <label
-                                      htmlFor="to-date"
-                                      className="w-100 p-1 ml-1"
-                                      style={{ fontSize: "13px" }}
-                                    >
-                                      Account No
-                                    </label>
-                                    <input
-                                      type="text"
-                                      id="to-date"
-                                      name="AccountCode"
-                                      value={AccountDayWiseShipments.formData.AccountCode}
-                                      onChange={handleChange}
-                                      style={{
-                                        marginRight: "3px",
-                                        border: "none",
-                                        width: "80%",
-                                      }}
-
-                                    />
-                                  </div>
-                                }
-
-                                <button
-                                  type="button"
-                                  onClick={handleSubmit}
-                                  className="go-cn"
-                                  style={{ marginLeft: '-3px', borderRadius: '9px', backgroundColor: 'rgb(44, 162, 198)', color: 'white', border: 'none', padding: '0px 15px', height: '40px', marginTop: '6px' }}
-                                >
-                                  Submit</button>
-                              </form>
-                            </div>
-                          </div>
+                          </span>
+                          <h3 className="mb-0">Summary Analytics</h3>
                         </div>
                       </div>
+
+                      <div className="col-12 col-lg-8">
+                        <form className="row g-2 align-items-end dashboard-filter">
+
+                          <div className="col-12 col-sm-6 col-md-3">
+                            <label>From</label>
+                            <ReactDatePicker
+                              className="form-control"
+                              value={AccountDayWiseShipments.formData.FromDate}
+                              onChange={(e) => {
+                                const date = moment(e).format("YYYY-MM-DD");
+                                AccountDayWiseShipments.setFormData(p => ({ ...p, FromDate: date }));
+                                PickupSummaryForAccounts.setFormData(p => ({ ...p, FromDate: date }));
+                                DeliveryDetailsForAccounts.setFormData(p => ({ ...p, FromDate: date }));
+                                DailyPickupDetailsForAccounts.setFormData(p => ({ ...p, FromDate: date }));
+                              }}
+                              maxDate={new Date()}
+                              dateFormat="dd/MM/yyyy"
+                              placeholderText="Select date"
+                              showMonthDropdown
+                              showYearDropdown
+                            />
+                          </div>
+
+                          <div className="col-12 col-sm-6 col-md-3">
+                            <label>To</label>
+                            <ReactDatePicker
+                              className="form-control"
+                              value={AccountDayWiseShipments.formData.ToDate}
+                              onChange={(e) => {
+                                const date = moment(e).format("YYYY-MM-DD");
+                                AccountDayWiseShipments.setFormData(p => ({ ...p, ToDate: date }));
+                              }}
+                              minDate={AccountDayWiseShipments.formData.FromDate}
+                              maxDate={new Date()}
+                              dateFormat="dd/MM/yyyy"
+                              placeholderText="Select date"
+                              showMonthDropdown
+                              showYearDropdown
+                            />
+                          </div>
+
+                          {userData?.data?.data?.user?.Role === "Admin" && (
+                            <div className="col-12 col-sm-6 col-md-3">
+                              <label>Account No</label>
+                              <input
+                                type="text"
+                                className="form-control"
+                                name="AccountCode"
+                                value={AccountDayWiseShipments.formData.AccountCode}
+                                onChange={handleChange}
+                                placeholder="Enter account"
+                              />
+                            </div>
+                          )}
+
+                          <div className="col-12 col-sm-6 col-md-3 d-grid">
+                            <button
+                              type="button"
+                              onClick={handleSubmit}
+                              className="btn btn-primary"
+                              style={{ height: "40px" }}
+                            >
+                              Apply
+                            </button>
+                          </div>
+
+                        </form>
+                      </div>
+
                     </div>
                   </div>
+                  {/* part 2 */}
                   <PrepadAccountStatusLeftMoney />
                   <hr className=" mb-4" style={{ color: "#2ca2c6" }} />
                   {AccountDayWiseShipments.errors.error && AccountDayWiseShipments.errors.message ? <ErrorComponent message={AccountDayWiseShipments.errors.message} />
 
                     : <>
                       <div className="row mt-4">
-                        <div className="col-xl-3 col-lg-3">
-                          <div
-                            className="card tilebox-one"
-                            style={{
-                              boxShadow: "4px 4px 21px rgba(76,64,247,.2)",
-                              borderRadius: "10px",
-                              border: "1px solid white",
-                            }}
-                          >
-                            <div className="card-body">
-                              <i
-                                className="fa fa-truck"
-                                aria-hidden="true"
-                                style={{ color: "orange" }}
-                              ></i>
 
-                              <h6 className="text-uppercase mt-0">Total Shipments</h6>
-                              <h2 className="my-2" id="active-users-count">
-                                {data[0] + data[1] + data[2]}
-                              </h2>
-                              {/* <hr style={{ color: "#2ca2c6" }} /> */}
-                              {/* <p className="mb-0 text-muted">
-                                <span className="text-success me-2">
-                                  <i
-                                    className="fa fa-level-up"
-                                    aria-hidden="true"
-                                  ></i>
-                                  5.27%
-                                </span>
-                                <span className="text-nowrap">Since last month</span>
-                              </p> */}
-                            </div>{" "}
-                            {/* end card-body*/}
-                          </div>
-                          <div className="row">
-                            <div className="col-lg-5"></div>
-                            <div className="col-lg-7"></div>
+                        
+                        <div className="col-xl-4 col-lg-4">
+                          <div className="stats-card">
+                            <div className="stats-header">
+                              <div className="stats-icon orange">
+                                <i className="fa fa-truck"></i>
+                              </div>
+                              <span className="stats-title">Total Shipments</span>
+                            </div>
+
+                            <div className="stats-value">
+                              {data[0] + data[1] + data[2]}
+                            </div>
+
+                            <div className="stats-progress">
+                              <div
+                                className="stats-progress-fill orange"
+                                style={{ width: `${(data[0] / (data[0] + data[1] + data[2])) * 100}%` }}
+                              ></div>
+                            </div>
+
+                            <div className="stats-footer">
+                              <span>Delivered: {data[0]}</span>
+                              <a href="/manage-shipping">Manage →</a>
+                            </div>
                           </div>
                         </div>
-                        <div className="col-xl-3 col-lg-3">
-                          <div
-                            className="card tilebox-one"
-                            style={{
-                              boxShadow: "4px 4px 21px rgba(76,64,247,.2)",
-                              borderRadius: "10px",
-                              border: "1px solid white",
-                            }}
-                          >
-                            <div className="card-body">
-                              <i
-                                className="fa fa-suitcase"
-                                aria-hidden="true"
-                                style={{ color: "#034DA8" }}
-                              ></i>
 
-                              <h6 className="text-uppercase mt-0">Total Pickups</h6>
-                              <h2 className="my-2" id="active-users-count">
-                                {pickedupudata[0]}
-                              </h2>
-                              {/* <hr style={{ color: "#2ca2c6" }} /> */}
-                              {/* <p className="mb-0 text-muted">
-                                <span className="text-success me-2">
-                                  <i
-                                    className="fa fa-level-up"
-                                    aria-hidden="true"
-                                  ></i>
-                                  5.27%
-                                </span>
-                                <span className="text-nowrap">Since last month</span>
-                              </p> */}
-                            </div>{" "}
-                            {/* end card-body*/}
+                        <div className="col-xl-4 col-lg-4">
+                          <div className="stats-card">
+                            <div className="stats-header">
+                              <div className="stats-icon blue">
+                                <i className="fa fa-suitcase"></i>
+                              </div>
+                              <span className="stats-title">Total Pickups</span>
+                            </div>
+
+                            <div className="stats-value">{pickedupudata[0]}</div>
+
+                            <div className="stats-progress">
+                              <div
+                                className="stats-progress-fill blue"
+                                style={{ width: "70%" }}
+                              ></div>
+                            </div>
+
+                            <div className="stats-footer">
+                              <span>Completed: {pickedupudata[1]}</span>
+                              <a href="/pickup-history">History →</a>
+                            </div>
                           </div>
                         </div>
-                        <div className="col-xl-3 col-lg-3">
-                          <div
-                            className="card tilebox-one"
-                            style={{
-                              boxShadow: "4px 4px 21px rgba(76,64,247,.2)",
-                              borderRadius: "10px",
-                              border: "1px solid white",
-                            }}
-                          >
-                            <div className="card-body">
-                              <i
-                                className="fa fa-truck"
-                                aria-hidden="true"
-                                style={{ color: "orange" }}
-                              ></i>
 
-                              <h6 className="text-uppercase mt-0">Shipment Status</h6>
-                              {data && data.length > 0 && data.map((item, index) => (
-                                <>
-                                  <span>{index === 0 ? "Delivered" : index === 1 ? "Pending" : "Returned"} {item}</span>
-                                  <br />
-                                </>
-                              ))}
-                              {/* <hr style={{ color: "#2ca2c6" }} />
-                              <p className="mb-0 text-muted">
-                                <span className="text-success me-2">
-                                  <i
-                                    className="fa fa-level-up"
-                                    aria-hidden="true"
-                                  ></i>
-                                  5.27%
-                                </span>
-                                <span className="text-nowrap">Since last month</span>
-                              </p> */}
-                            </div>{" "}
-                            {/* end card-body*/}
-                          </div>
-                          <div className="row">
-                            <div className="col-lg-5"></div>
-                            <div className="col-lg-7"></div>
-                          </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-3">
+                        <div className="col-xl-4 col-lg-4">
                           <div
                             className="card tilebox-one"
                             style={{
@@ -502,13 +296,29 @@ const Dashboard = () => {
                               ></i>
 
                               <h6 className="text-uppercase mt-0">Pickup Status</h6>
+                                <div className="pickup-progress-wrapper">
+                                  {pickedupudata && pickedupudata.length > 0 && pickedupudata.map((item, index) => {
+                                    const label = index === 0 ? "Booking" : index === 1 ? "Completed" : "Pending";
+                                    const percent = item; // assuming item is already percentage like 45, 60, etc.
 
-                              {pickedupudata && pickedupudata.length > 0 && pickedupudata.map((item, index) => (
-                                <>
-                                  <span>{index === 0 ? "Booking" : index === 1 ? "Completed" : "Pending"} {item}</span>
-                                  <br />
-                                </>
-                              ))}
+                                    return (
+                                      <div className="pickup-progress-row" key={index}>
+                                        <div className="progress-label">
+                                          <span>{label}</span>
+                                          <span className="progress-value">{percent}</span>
+                                        </div>
+
+                                        <div className="progress-track">
+                                          <div
+                                            className={`progress-fill ${index === 0 ? 'booking' : index === 1 ? 'completed' : 'pending'}`}
+                                            style={{ width: `${percent}%` }}
+                                          ></div>
+                                        </div>
+                                      </div>
+                                    );
+                                  })}
+                                </div>
+
 
                               {/* <hr style={{ color: "#2ca2c6" }} />
                               <p className="mb-0 text-muted">
@@ -525,7 +335,31 @@ const Dashboard = () => {
                             {/* end card-body*/}
                           </div>
                         </div>
-                        <div className=" first-graph mt-5">
+
+                        <div className="shipment-status-panel mt-3">
+                          <div className="status-header">
+                            <div className="status-icon">
+                              <i className="fa fa-truck" aria-hidden="true"></i>
+                            </div>
+                            <h6>Shipment Status</h6>
+                          </div>
+
+                          <div className="status-body">
+                            {data && data.length > 0 && data.map((item, index) => (
+                              <div key={index} className={`status-row ${index === 0 ? 'delivered' : index === 1 ? 'pending' : 'returned'}`}>
+                                <span className="status-label">
+                                  {index === 0 ? "Delivered" : index === 1 ? "Pending" : "Returned"}
+                                </span>
+                                <span className="status-value">{item}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+
+
+                        {/* old UI */}
+                        {/* <div className=" first-graph mt-5">
                           <div className="row">
 
                             <div className="col-md-6">
@@ -550,7 +384,33 @@ const Dashboard = () => {
                             </div>
 
                           </div>
-                        </div>
+                        </div> */}
+
+                        {/* new UI */}
+                        {/* <div className="first-graph mt-5">
+                          <div className="row g-4">
+
+                            <div className="col-12 col-md-6">
+                              <div className="graph-card text-center p-3 h-100">
+                                <h6 className="graph-title mb-2">Pickup Status</h6>
+                                <div className="graph-wrapper">
+                                  <DoughnutChart data={pickedupudata} labels={['Booking', 'Picked Up', 'Pending']} />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="col-12 col-md-6">
+                              <div className="graph-card text-center p-3 h-100">
+                                <h6 className="graph-title mb-2">Shipment Delivery Status</h6>
+                                <div className="graph-wrapper">
+                                  <DoughnutChart data={data} labels={['Delivered', 'Not Delivered', 'Returned']} />
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div> */}
+
                         <div className=" first-graph mt-4">
                           <div className="row">
                             <div className="col-md-6">

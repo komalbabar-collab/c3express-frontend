@@ -3674,6 +3674,7 @@ input[type=number] {
 
 .card.tilebox-one .card-body {
     height: 210px;
+    /* height: 128px; */
 }
 
 .PhoneInput {
