@@ -1212,7 +1212,8 @@ a:hover {
     }
 
     .banner_content {
-        top: 1em;
+        /* top: 1em; */
+        top: 3em;
     }
 
     .for_form_input {
@@ -5140,3 +5141,60 @@ border-radius : 5px;
   overflow: hidden;       /* hides scrollbar */
   resize: none;          /* optional: disables resize handle */
 }
+
+
+/* mobile new css */
+@media (max-width: 768px) {
+
+  .banner_cover,
+  .banner_item,
+  #trackingshipment {
+    height: auto !important;
+    min-height: 100vh;
+  }
+
+  .banner_item video {
+    width: 100% !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .banner_item {
+    position: relative;
+  }
+
+  .banner_content {
+    position: relative;
+    z-index: 2;
+    padding: 25px 15px;
+    text-align: center;
+  }
+
+  .form-box {
+    width: 100%;
+  }
+
+  .tracking-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tracking-tabs .tab-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-tracking {
+    width: 100%;
+  }
+
+}
+
