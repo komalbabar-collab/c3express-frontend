@@ -6,54 +6,9 @@ import Loader from '../../heplers/Loaders/Loader';
 import ErrorComponent from '../../heplers/ErrorComponent';
 import { toast } from 'react-toastify';
 import logo from '../../assets/images/c3express-logo.png'
-
-
-const ShipmentProgress = ({ progress }) => {
-  const [animatedStep, setAnimatedStep] = useState(0);
-
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      i++;
-      setAnimatedStep(i);
-      if (i >= progress) clearInterval(interval);
-    }, 1200);
-
-    return () => clearInterval(interval);
-  }, [progress]);
-
-  return (
-    <div className="shipment-progress">
-      <div
-        className="progress-vehicle"
-        style={{ 
-        left: `${((animatedStep - 0.8) / 4) * 100}%`
-        }}
-      >
-       <i class="fa fa-truck truck-icon"></i>
-
-      </div>
-
-      {["Booked", "Picked Up", "In Transit", "Out for Delivery", "Delivered"].map(
-        (label, index) => (
-          <div
-            key={index}
-            className={`progress-step
-              ${animatedStep > index ? "done" : ""}
-              ${animatedStep === index + 1 ? "current" : ""}`}
-          >
-            <div className="step-circle">
-              {animatedStep > index ? "✓" : index + 1}
-            </div>
-            <span className="step-label">{label}</span>
-          </div>
-        )
-      )}
-    </div>
-  );
-};
-
 const TrackingDetails = () => {
+
+
     const dispatch = useDispatch()
     const trackingDetailsState = useSelector((state) => state.TrackingDetailsReducer)
     const [shownDetails, setShownDetails] = useState({})
@@ -88,7 +43,7 @@ const TrackingDetails = () => {
                             (
 
                                 <>
-                                    <div className="pl-3 text-center track-another-shipment">
+                                    <div className="pl-3 text-center track-another-shipment mb-3">
                                         <span className="sub-title pt-2">Result Summary</span>
                                         <button
                                             type="button"
@@ -154,21 +109,21 @@ const TrackingDetails = () => {
                                                                 </div>
                                                                 .
                                                             </div>
-                                                            <div className="media d-flex result-summary-status inactive-grey mt-2">
+                                                            <div className="media d-flex result-summary-status inactive-grey mt-5">
                                                                 <div className="title-hold">
                                                                     {
                                                                         item.TrackingLogDetails && item.TrackingLogDetails.length > 0 && (
-                                                                            <h6 className="delivery-ggreen-title green-title">{item.TrackingLogDetails[0].Remarks}
+                                                                            <h4 className="green-title">{item.TrackingLogDetails[0].Remarks}
                                                                                 {
                                                                                     item.TrackingLogDetails[0]["DeliveredTo"] ? `- ${item.TrackingLogDetails[0]["DeliveredTo"]}` : ''
                                                                                 }
-                                                                            </h6>
+                                                                            </h4>
                                                                         )
                                                                     }
 
                                                                     <h6>
                                                                         <span className="para-1">
-                                                                            Origin : {item?.Origin} {" "}
+                                                                            Origin :{item?.Origin} {" "}
                                                                             <span className="para-1">
                                                                                 Destination : {item?.Destination}
                                                                             </span>
@@ -183,19 +138,27 @@ const TrackingDetails = () => {
                                                                     )}
                                                                 </div>
                                                             </div>
-                                                         <ShipmentProgress progress={item.ShipmentProgress} />
-
-                                                            {/* <div className="shipment-progress">
-
-                                                               
-                                                            </div> */}
-
-                                                         
-
-
+                                                            <div className="step-counter">
+                                                                <div className="stepper-wrapper">
+                                                                    <div className={`stepper-item  ${item.ShipmentProgress > 0 && 'completed'} active margin-left-10`}>
+                                                                        <div className="step-counter">✓</div>
+                                                                    </div>
+                                                                    <div className={`stepper-item  ${item.ShipmentProgress > 1 && 'completed'} active`}>
+                                                                        <div className="step-counter">✓</div>
+                                                                    </div>
+                                                                    <div className={`stepper-item  ${item.ShipmentProgress > 2 && 'completed'} active`}>
+                                                                        <div className="step-counter">✓</div>
+                                                                    </div>
+                                                                    <div className={`stepper-item   ${item.ShipmentProgress > 3 && 'completed'} active`}>
+                                                                        <div className="step-counter">✓</div>
+                                                                    </div>
+                                                                    <div className={`stepper-item  ${item.ShipmentProgress > 4 && 'completed'}  margin-right-10`}>
+                                                                        <div className="step-counter">✓</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        {/* listing section */}
-                                                        {/* <div>
+                                                        <div>
                                                             <div className="panel-body" id={item?.AirWayBillNo}>
                                                                 <div className="card-body summary-details-tabs">
                                                                     {trackingDetailsState.data.length == 1 ? (
@@ -214,33 +177,7 @@ const TrackingDetails = () => {
 
                                                                 </div>
                                                             </div>
-                                                        </div> */}
-
-                                                        <div className="shipment-details-wrapper" id={item?.AirWayBillNo}>
-                                                        {(trackingDetailsState.data.length === 1 || shownDetails[item?.AirWayBillNo]) && (
-                                                            <div className="shipment-details-card">
-
-                                                            <div className="details-header">
-                                                                <h6>
-                                                                <i className="fa fa-list-alt me-2"></i> Tracking History
-                                                                </h6>
-                                                            </div>
-
-                                                            <div className="details-body">
-                                                                {item.TrackingLogDetails?.length > 0 ? (
-                                                                <TrackingTable trackingLogDetails={item.TrackingLogDetails} />
-                                                                ) : (
-                                                                <div className="empty-state">
-                                                                    No tracking updates available.
-                                                                </div>
-                                                                )}
-                                                            </div>
-
-                                                            </div>
-                                                        )}
                                                         </div>
-
-                                                        
                                                     </>
                                                 )
                                             }
