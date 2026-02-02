@@ -221,6 +221,10 @@ footer {
     }
 }
 
+.services_c3x {
+    padding-top:30px;
+}
+
 .services_c3x h2 {
     text-align: center;
     color: #dad7d7;
@@ -777,7 +781,12 @@ a.btn.btn-service {
 }
 
 .container_gray_bg {
+    /* background: #f7f7f7; */
+}
+
+.service_gray_bg {
     background: #f7f7f7;
+    margin-top: 2em;
 }
 
 .container_gray_bg h2 {
@@ -842,7 +851,7 @@ a.btn.btn-service {
 
 @media (max-width: 700px) {
     .tracking-result {
-        margin-top: 60% !important;
+        /* margin-top: 60% !important; */
     }
 }
 
@@ -1005,6 +1014,7 @@ a.btn.btn-service {
     padding: 15px 0;
     position: relative;
     z-index: 1;
+    margin-top: 31px;
 }
 
 @media (max-width: 767px) {
@@ -5198,3 +5208,23 @@ border-radius : 5px;
 
 }
 
+.outer_div_comapnies_section{
+    background-color: #f3f3f3;
+    padding: 20px;
+}
+
+
+/* banner tab responsive */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #trackingshipment{
+        margin-top: 101px;
+    }
+
+    .top_fixedheader {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #fff;
+}
+
+}

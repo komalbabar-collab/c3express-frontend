@@ -34,7 +34,7 @@ const Groupofcompanies = () => {
         },
     };
     return (
-        <div>
+        <div className="outer_div_comapnies_section">
             <>
                 <div className="container">
                     {/*container starts here*/}

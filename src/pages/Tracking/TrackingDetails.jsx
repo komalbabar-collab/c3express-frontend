@@ -37,7 +37,7 @@ const TrackingDetails = () => {
         <>
             <div className='container'>
                 <div className="row" id="trackingResultDiv">
-                    <div className="w-100  mt-3 ">
+                    <div className="w-100">
 
                         {trackingDetailsState.loading ? (<Loader />) : trackingDetailsState.error ? (<></>) : trackingDetailsState.data.length > 0 ?
                             (
