@@ -41,12 +41,12 @@ const DashboardLayout = (props) => {
                                 <li className="nav-list-item nav-list-item-header">
                                     <img src={footerlogo} alt="logo" className="nav-list-item-header-logo" />
                                 </li>
-                                <li className="nav-list-item">
-                                    <Link to="/" className='nav-list-item-link'>
+                                {/* <li className="nav-list-item">
+                                    <Link to="/dashboard" className='nav-list-item-link'>
                                         <i className="fa fa-home fa-fw" />
                                         <span className="nav-list-item-title">Home</span>
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li className="nav-list-item">
                                     <Link to="/dashboard" className='nav-list-item-link'>
                                         <i className="fa fa-home fa-fw" />
@@ -56,7 +56,7 @@ const DashboardLayout = (props) => {
                                 <ProtectComponent isDashboard={true} dashboard={"Manage_Sub_Users"} userAuthData={props.userAuthData}>
                                     <li className="nav-list-item">
                                         <Link to="/ManageSubUsers" className='nav-list-item-link'>
-                                            <i className="fa fa-shopping-cart fa-fw" />
+                                            <i class="fa fa-users" aria-hidden="true"></i>
                                             <span className="nav-list-item-title">
                                                 {data && data.data.user.Role === "Admin" ? "Manage Customers" : "Manage Sub Users"}</span>
                                         </Link>
@@ -64,14 +64,14 @@ const DashboardLayout = (props) => {
                                 </ProtectComponent>
                                 <li className="nav-list-item">
                                     <Link to="/ManageAddress" className='nav-list-item-link'>
-                                        <i className="fa fa-shopping-cart fa-fw" />
+                                        <i class="fa fa-address-card" aria-hidden="true"></i>
                                         <span className="nav-list-item-title">Manage Address</span>
                                     </Link>
                                 </li>
                                 {data && data.data.user.Role === "Admin" && (
                                     <li className="nav-list-item">
                                         <Link to="/ManageServiceTypes" className='nav-list-item-link'>
-                                            <i className="fa fa-shopping-cart fa-fw" />
+                                           <i class="fa fa-wrench" aria-hidden="true"></i>
                                             <span className="nav-list-item-title">Manage Service Types</span>
                                         </Link>
                                     </li>
@@ -89,7 +89,7 @@ const DashboardLayout = (props) => {
                                         <></>
                                     ) : (<li className="nav-list-item">
                                         <Link to="/Managingshipping" className='nav-list-item-link'>
-                                            <i className="fa fa-shopping-cart fa-fw" />
+                                            <i class="fa fa-truck"></i>
                                             <span className="nav-list-item-title">Manage Shipping</span>
                                         </Link>
                                     </li>)
@@ -98,7 +98,7 @@ const DashboardLayout = (props) => {
                                 <ProtectComponent isDashboard={true} dashboard={"Pickup_Request"} userAuthData={props.userAuthData}>
                                     <li className="nav-list-item">
                                         <Link to="/Schedulepickupbooking" className='nav-list-item-link'>
-                                            <i className="fa fa-shopping-cart fa-fw" />
+                                         <i class="fa fa-calendar-plus-o"></i>
                                             <span className="nav-list-item-title">Schedule A Pickup</span>
                                         </Link>
                                     </li>
@@ -107,7 +107,7 @@ const DashboardLayout = (props) => {
 
                                     <li className="nav-list-item">
                                         <Link to="/Pickuphistory" className="nav-list-item-link">
-                                            <i className="fa fa-child fa-fw" />
+                                            <i class="fa fa-history"></i>
                                             <span className="nav-list-item-title">Pickup History</span>
                                         </Link>
                                     </li>
@@ -123,7 +123,7 @@ const DashboardLayout = (props) => {
                                 {!isLoading && data && data?.data?.AccountData?.PaymentType == "PP" && (
                                     <li className="nav-list-item">
                                         <Link to="/PrepaidTopuprequest" className="nav-list-item-link">
-                                            <i className="fa fa-child fa-fw" />
+                                           <i class="fa fa-history"></i>
                                             <span className="nav-list-item-title">Prepaid Top-Up Request</span>
                                         </Link>
                                     </li>
@@ -131,34 +131,34 @@ const DashboardLayout = (props) => {
                                 {!isLoading && data && data?.data?.AccountData?.PaymentType == "PP" && (
                                     <li className="nav-list-item">
                                         <Link to="/Topuphistory" className="nav-list-item-link">
-                                            <i className="fa fa-child fa-fw" />
+                                            <i class="fa fa-history"></i>
                                             <span className="nav-list-item-title">Prepaid Top-Up Request History</span>
                                         </Link>
                                     </li>
                                 )}
                                 <li className="nav-list-item">
                                     <Link to={"/invoices"} className="nav-list-item-link">
-                                        <i className="fa fa-child fa-fw" />
+                                        <i class="fa fa-file-text-o"></i>
                                         <span className="nav-list-item-title">Invoices</span>
                                     </Link>
                                 </li>
                                 <li className="nav-list-item">
                                     <Link to={"/PaymentDues"} className="nav-list-item-link">
-                                        <i className="fa fa-child fa-fw" />
+                                        <i class="fa fa-money"></i>
                                         <span className="nav-list-item-title">Payments Dues</span>
                                     </Link>
                                 </li>
                                 {!isLoading && data && data?.data?.AccountData?.PaymentType == "PP" && (
                                     <li className="nav-list-item">
                                         <Link to={"/PrepaidAccountStatus"} className="nav-list-item-link">
-                                            <i className="fa fa-child fa-fw" />
+                                            <i class="fa fa-wallet"></i> 
                                             <span className="nav-list-item-title">Prepaid Account Status</span>
                                         </Link>
                                     </li>
                                 )}
                                 <li className="nav-list-item">
                                     <a style={{ cursor: "pointer" }} onClick={Logout} className="nav-list-item-link">
-                                        <i className="fa fa-child fa-fw" />
+                                        <i class="fa fa-sign-out"></i>
                                         <span className="nav-list-item-title">Logout</span>
                                     </a>
                                 </li>
@@ -172,6 +172,24 @@ const DashboardLayout = (props) => {
                                 <i className="fa fa-bars bars" />
                             </button>
 
+                             {/* Logout button in header */}
+                            <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
+                                <button 
+                                    onClick={Logout} 
+                                    style={{
+                                        background: 'transparent',
+                                        border: 'none',
+                                        color: 'black',
+                                        cursor: 'pointer',
+                                        fontSize: '16px',
+                                        display: 'flex',
+                                        alignItems: 'center'
+                                    }}
+                                >
+                                    <i className="fa fa-sign-out" style={{ marginRight: '5px' }}></i>
+                                    Logout
+                                </button>
+                            </div>
                         </header>
                     </div>
                     {props.children}

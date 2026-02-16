@@ -32,7 +32,7 @@ const Banner = (props) => {
   return (
     <div>
       <div className="banner_cover">
-        <div>
+       
           <div className="banner_item item" id="trackingshipment">
             <video muted autoPlay loop className="img-fluid" style={{ width: '100%', height: '100%'}} src={banne} alt="" />
             <div className="container">
@@ -190,7 +190,7 @@ const Banner = (props) => {
               </div>
             </div>
           </div>
-        </div>
+        
       </div>
       <TrackingDetails />
     </div>

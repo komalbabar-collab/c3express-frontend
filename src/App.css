@@ -221,6 +221,10 @@ footer {
     }
 }
 
+.services_c3x {
+    padding-top:30px;
+}
+
 .services_c3x h2 {
     text-align: center;
     color: #dad7d7;
@@ -777,7 +781,12 @@ a.btn.btn-service {
 }
 
 .container_gray_bg {
+    /* background: #f7f7f7; */
+}
+
+.service_gray_bg {
     background: #f7f7f7;
+    margin-top: 2em;
 }
 
 .container_gray_bg h2 {
@@ -842,7 +851,7 @@ a.btn.btn-service {
 
 @media (max-width: 700px) {
     .tracking-result {
-        margin-top: 60% !important;
+        /* margin-top: 60% !important; */
     }
 }
 
@@ -1005,6 +1014,7 @@ a.btn.btn-service {
     padding: 15px 0;
     position: relative;
     z-index: 1;
+    margin-top: 31px;
 }
 
 @media (max-width: 767px) {
@@ -1212,7 +1222,8 @@ a:hover {
     }
 
     .banner_content {
-        top: 1em;
+        /* top: 1em; */
+        top: 3em;
     }
 
     .for_form_input {
@@ -3334,11 +3345,13 @@ p {
 }
 
 .summary-forbss {
-    background: #fdf8f2;
-    padding: 17px 19px 19px 17px;
-    font-weight: 700;
-    color: #2ca2c6;
-    font-size: 15px;
+    /* background: #fdf8f2; */
+    /* padding: 17px 19px 19px 17px; */
+    /* font-weight: 700; */
+    /* color: #2ca2c6; */
+    /* font-size: 15px; */
+    font-size: 23px;
+    font-weight: 100;
 }
 
 .stepper-wrapper {
@@ -3674,6 +3687,7 @@ input[type=number] {
 
 .card.tilebox-one .card-body {
     height: 210px;
+    /* height: 128px; */
 }
 
 .PhoneInput {
@@ -5138,4 +5152,81 @@ border-radius : 5px;
 .md-form-control {
   overflow: hidden;       /* hides scrollbar */
   resize: none;          /* optional: disables resize handle */
+}
+
+
+/* mobile new css */
+@media (max-width: 768px) {
+
+  .banner_cover,
+  .banner_item,
+  #trackingshipment {
+    height: auto !important;
+    min-height: 100vh;
+  }
+
+  .banner_item video {
+    width: 100% !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .banner_item {
+    position: relative;
+  }
+
+  .banner_content {
+    position: relative;
+    z-index: 2;
+    padding: 25px 15px;
+    text-align: center;
+  }
+
+  .form-box {
+    width: 100%;
+  }
+
+  .tracking-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tracking-tabs .tab-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-tracking {
+    width: 100%;
+  }
+
+}
+
+.outer_div_comapnies_section{
+    background-color: #f3f3f3;
+    padding: 20px;
+}
+
+
+/* banner tab responsive */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #trackingshipment{
+        margin-top: 101px;
+    }
+
+    .top_fixedheader {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #fff;
+}
+
 }

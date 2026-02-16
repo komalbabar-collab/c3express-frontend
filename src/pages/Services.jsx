@@ -7,8 +7,8 @@ import fullfilment from "../assets/service/fullfilment.jpg"
 import { Link } from "react-router-dom"
 const Services = () => {
     return (
-        <div>
-            <div className="container">
+        <div class="service_gray_bg">
+            <div className="container ">
                 <div id="services_c3x">
                     <div className="services_c3x">
                         <h2>services</h2>
