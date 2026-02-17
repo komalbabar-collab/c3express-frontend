@@ -96,7 +96,9 @@ const Header = () => {
           <Navbar key={expand} expand={expand}>
             <Container>
               <Navbar.Brand onClick={() => navigate("/")}>
-                <img src='/logo/logo.png' />
+                <Link to="/">
+                  <img src='/logo/logo.png' />
+                </Link>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
               <Navbar.Offcanvas

@@ -11,8 +11,9 @@ const OurGallery = () => {
         <div>
             <Header1 />
             <div className="p-inner_head p-inner_contact">
-                <div className="p-page_title">
+                
                     <div className="container">
+                        <h1 className="p-page-title">Gallery</h1>
                         <ul className="p-breadcrumb">
                             <li>
                                 <a href="https://c3xpress.com/">Home</a>
@@ -22,7 +23,7 @@ const OurGallery = () => {
                             </li>
                         </ul>
                     </div>
-                </div>
+                
             </div>
             <div className="container Gallery">
                 <div id="services_c3x" style={{ paddingBottom: '70px' }}>

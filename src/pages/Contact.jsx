@@ -140,8 +140,9 @@ const Contact = () => {
             </Helmet>
             <Header1 />
             <div className="p-inner_head p-inner_contact">
-                <div className="p-page_title">
+               
                     <div className="container">
+                        <h1 className="p-page-title">Contact Us</h1>
                         <ul className="p-breadcrumb">
                             <li>
                                 <a href="https://c3xpress.com/">Home</a>
@@ -151,117 +152,57 @@ const Contact = () => {
                             </li>
                         </ul>
                     </div>
-                </div>
+                
             </div>
-            <section>
-                <div className="p-page_inner contact_page_cover">
-                    <div className="p-section_head">
-                        <h1>Contact us</h1>
+            <section className="contact-section">
+                <div className="container">
+
+                    <div className="p-section_head text-center">
+                    <h1>Contact us</h1>
                     </div>
-                    <div className="container p-content_section p-contact">
-                        <div className="row clearfix">
-                            <div className="col-md-6 col-lg-6 contact_form">
-                                <form
-                                    method="post"
-                                    action="#"
-                                    onSubmit={handleSubmit}
-                                    name="frmContact"
-                                    id="frmContact"
-                                >
-                                    <div className="footer_form_outer">
-                                        <input
-                                            placeholder="Name *"
-                                            name="full_name"
-                                            onChange={(e) => handleChange("full_name", e.target.value)}
-                                            autoComplete="off"
-                                            id="contactName"
-                                            value={formData["full_name"]}
-                                            required=""
-                                            type="text"
-                                            className="form-control mb-3"
-                                        />
-                                        <input
-                                            name="email"
-                                            onChange={(e) => handleChange("email", e.target.value)}
-                                            id="contactEmail"
-                                            autoComplete="off"
-                                            value={formData["email"]}
-                                            required=""
-                                            placeholder="Email *"
-                                            type="email"
-                                            className="form-control mb-3"
-                                        />
-                                        <input
-                                            name="phone_number"
-                                            onChange={(e) => handleChange("phone_number", e.target.value)}
-                                            id="contactPhone"
-                                            autoComplete="off"
-                                            value={formData["phone_number"]}
-                                            required=""
-                                            placeholder="Phone Number *"
-                                            type="text"
-                                            className="form-control mb-3"
-                                        />
-                                        <input
-                                            name="subject"
-                                            onChange={(e) => handleChange("subject", e.target.value)}
-                                            id="contactSubject"
-                                            autoComplete="off"
-                                            value={formData["subject"]}
-                                            required=""
-                                            placeholder="Your subject *"
-                                            type="text"
-                                            className="form-control mb-3"
-                                        />
-                                        <textarea
-                                            name="message"
-                                            onChange={(e) => handleChange("message", e.target.value)}
-                                            id="contactMessage"
-                                            autoComplete="off"
-                                            required=""
-                                            placeholder="Your message *"
-                                            value={formData["message"]}
-                                            className="form-control mb-3"
-                                        />
-                                        <canvas ref={canvasRef}
-                                            width="200"
-                                            height="70">
 
-                                        </canvas>
-                                        <button id="reload-button" onClick={
-                                            () => initializeCaptcha(
-                                                canvasRef.current.getContext('2d'))}>
-                                            Reload
-                                        </button>
-                                        <br /> <br />
-                                        <input
-                                            name="userInput"
-                                            onChange={(e) => handleChange("userInput", e.target.value)}
-                                            id="user_captcha"
-                                            value={formData["userInput"]}
-                                            autoComplete="off"
-                                            required=""
-                                            placeholder="Enter  the text shown above *"
-                                            type="text"
-                                            className="form-control mb-5"
-                                        />
-                                        {error ? <p className="error" > {error && error.data.message.replace(/"/g)} </p> : data ? <p className="success" > {data && data.message} </p> : null}
-                                        {isLoading ? <Spinner animation="border" className="text-center" variant="light" /> : <div className="form_submit_btn  ">
-                                            <input name="" defaultValue="Submit" type="submit" />
-                                        </div>}
+                    <div className="row contact-wrapper">
 
-                                    </div>
+                    {/* FORM */}
+                    <div className="col-lg-6">
+                        <div className="contact-card">
+                        <form onSubmit={handleSubmit}>
 
-                                    <br />
-                                </form>
+                            <input className="form-control" placeholder="Name *" />
+                            <input className="form-control" placeholder="Email *" />
+                            <input className="form-control" placeholder="Phone Number *" />
+                            <input className="form-control" placeholder="Your subject *" />
+                            <textarea className="form-control" placeholder="Your message *" />
+
+                            <div className="captcha-box">
+                            <canvas ref={canvasRef} width="200" height="70"></canvas>
+                            <button type="button" onClick={() =>
+                                initializeCaptcha(canvasRef.current.getContext("2d"))
+                            }>
+                                Reload
+                            </button>
                             </div>
-                            <div className="col-md-6 col-lg-6 p-contact_info">
-                                <div className="p-info_single">
-                                    <h5>
-                                        <i className="fa fa-building" />
-                                        Address
-                                    </h5>
-                                    <p>
+
+                            <input
+                            className="form-control"
+                            placeholder="Enter  the text shown above *"
+                            />
+
+                            <div className="form_submit_btn">
+                            <input type="submit" value="Submit" />
+                            </div>
+
+                        </form>
+                        </div>
+                    </div>
+
+                    {/* INFO */}
+                    <div className="col-lg-6">
+                        <div className="contact-card contact-info">
+
+                        <div className="p-info_single">
+                            <h5><i className="fa fa-building" /> Address</h5>
+                            <p>
                                         C3X International Couriers LLC WS-1, Ramool Avenue, 22A street Umm
                                         Ramool Dubai, United Arab Emirates,
                                         <br />
@@ -270,43 +211,36 @@ const Contact = () => {
                                         R-20, near al Masar scaffolding 28, Al Hiraf 3 St , Musaffah -
                                         M-11 Abu Dhabi, United Arab Emirates
                                     </p>
-                                </div>
-                                <div className="p-info_single clearfix">
-                                    <div>
-                                        <h5>
-                                            <i className="fa fa-phone" aria-hidden="true" /> Phone
-                                        </h5>
-                                        <a href="tel:+971 4 309 3333">+971 4 309 3333</a>
-                                    </div>
-                                    <div>
-                                        <h5>
-                                            <i className="fa fa-fax" aria-hidden="true" /> Fax
-                                        </h5>
-                                        <a href="tel:600 50 40 30">600 50 40 30</a>
-                                    </div>
-                                </div>
-                                <div className="p-info_single">
-                                    <h5>
-                                        <i className="fa fa-envelope" aria-hidden="true" /> Email
-                                    </h5>
-                                    <a href="mailto:info@c3xpress.com">info@c3xpress.com</a>
-                                </div>
-                                <hr />
-                                <div className="p-contact_text">
-                                    <p>
-                                        Feel free to contact us with any questions regarding C3X makes
+                        </div>
+
+                        <div className="p-info_single">
+                            <h5><i className="fa fa-phone" /> Phone</h5>
+                            <a href="tel:+971 4 309 3333">+971 4 309 3333</a>
+                        </div>
+
+                        <div className="p-info_single">
+                            <h5><i className="fa fa-envelope" /> Email</h5>
+                            <a href="mailto:info@c3xpress.com">info@c3xpress.com</a>
+                        </div>
+
+                        <hr />
+
+                        <p className="p-contact_text">
+                            Feel free to contact us with any questions regarding C3X makes
                                         deliveries happen faster for businesses and consumers. We`ve
                                         developed a unique same-day and next-day delivery network
                                         positioned to enhance the speed and flexibility of last-mile
                                         delivery. We help consumers send international parcels more
                                         cost-effectively.
-                                    </p>
-                                </div>
-                            </div>
+                        </p>
+
                         </div>
+                    </div>
+
                     </div>
                 </div>
             </section>
+
 
             <Footer />
         </div>

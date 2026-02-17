@@ -39,7 +39,7 @@ const Aboutus = ({ pageURL }) => {
                     {/* Breadcrumb */}
                     <ul className="p-breadcrumb">
                     <li>
-                        <a href="/">Home</a>
+                        <a href="https://c3xpress.com/">Home</a>
                     </li>
                     <li>
                         <span>About Us</span>

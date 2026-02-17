@@ -46,21 +46,22 @@ const Lastminute = ({ pageURL }) => {
             </Helmet>
             <Header1 />
             <div className="p-inner_head p-inner_contact">
-                <div className="p-page_title">
+             
                     <div className="container">
+                         <h1 className="p-page-title">Last-Minute Orders? No Worries with the Fastest International Shipping</h1>
                         <ul className="p-breadcrumb">
                             <li>
-                                <a href="https://c3xpress.com/">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li>
-                                <span>Blogs</span>
+                                 /  <a href="/blog">Blogs</a>
                             </li>
                             <li>
                                 <span>Last-Minute Orders? No Worries with the Fastest International Shipping</span>
                             </li>
                         </ul>
                     </div>
-                </div>
+                
             </div>
             <Container>
                 <Row>

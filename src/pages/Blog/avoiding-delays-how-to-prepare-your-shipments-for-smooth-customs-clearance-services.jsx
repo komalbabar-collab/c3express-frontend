@@ -46,21 +46,22 @@ const Delayshipment = ({ pageURL }) => {
             </Helmet>
             <Header1 />
             <div className="p-inner_head p-inner_contact">
-                <div className="p-page_title">
                     <div className="container">
+                         <h1 className="p-page-title">Avoiding Delays: How to Prepare Your Shipments for Smooth Customs Clearance Services</h1>
+               
                         <ul className="p-breadcrumb">
                             <li>
-                                <a href="https://c3xpress.com/">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li>
-                                <span>Blogs</span>
+                                /  <a href="/blog">Blogs</a>
                             </li>
                             <li>
                                 <span>Avoiding Delays: How to Prepare Your Shipments for Smooth Customs Clearance Services</span>
                             </li>
                         </ul>
                     </div>
-                </div>
+               
             </div>
             <Container>
                 <Row>

@@ -44,8 +44,9 @@ const Ourservices = () => {
             </Helmet>
             <Header1 />
             <div className="p-inner_head p-inner_contact">
-                <div className="p-page_title">
+               
                     <div className="container">
+                          <h1 className="p-page-title">Our Services</h1>
                         <ul className="p-breadcrumb">
                             <li>
                                 <a href="https://c3xpress.com/">Home</a>
@@ -55,7 +56,7 @@ const Ourservices = () => {
                             </li>
                         </ul>
                     </div>
-                </div>
+                
             </div>
             <div className="container">
                 <div id="services_c3x">

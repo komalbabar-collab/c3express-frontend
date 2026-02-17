@@ -12,8 +12,9 @@ const Blog = () => {
         <div>
             <Header1 />
             <div className="p-inner_head p-inner_contact">
-                <div className="p-page_title">
-                    <div className="container">
+                
+                    <div className="container  text-center">
+                         <h1 className="p-page-title">Blogs</h1>
                         <ul className="p-breadcrumb">
                             <li>
                                 <a href="https://c3xpress.com/">Home</a>
@@ -23,7 +24,7 @@ const Blog = () => {
                             </li>
                         </ul>
                     </div>
-                </div>
+               
             </div>
             <Container>
                 <Row>
@@ -36,7 +37,7 @@ const Blog = () => {
                                 <a href="blog/why-the-best-e-commerce-delivery-service-In-dubai-is-revolutionizing-online-shopping">
                                     <h4>Why The Best E-commerce Delivery Service In Dubai Is Revolutionizing Online Shopping?</h4>
                                     <h2>
-                                        In the fast-paced world of e-commerce, the demand for reliable and efficient delivery services is at an all-time high. Dubai, a bustling hub of commerce and technology, is at the forefront of this revolution, largely thanks to the best e-commerce delivery service in Dubai, provided by C3X.
+                                        In the fast-paced world of e-commerce, the demand for reliable and efficient delivery services is at an all-time high. Dubai, a bustling hub of commerce and technology, is at the forefront of this revolution, largely thanks to the best e-commerce delivery service in Dubai.
                                     </h2>
                                 </a>
                                 <a className="red-ores" href="blog/why-the-best-e-commerce-delivery-service-In-dubai-is-revolutionizing-online-shopping">
@@ -76,7 +77,7 @@ const Blog = () => {
                                         In today’s fast-paced world, delays just don’t cut it especially when
                                         you’re counting on something urgent to reach another country on time.
                                         Whether you’re a business owner shipping products to customers across the
-                                        globe or an individual sending a precious parcel to a loved one
+                                        globe or an individual sending a precious parcel to a loved
                                     </h2>
                                 </a>
                                 <a className="red-ores" href="blog/last-minute-orders-no-worries-with-the-fastest-international-shipping">
@@ -114,7 +115,7 @@ const Blog = () => {
                                     <h4>5 Signs You’re Using the Best International Parcel Service In UAE
                                     </h4>
                                     <h2>
-                                    It started with a missed birthday gift. A parcel filled with love and thoughtful surprises meant for a loved one in another country—delayed, damaged, and utterly disappointing. If you’ve ever experienced this, you know the frustration all too well. That’s when many of us start searching for a better option—a service that doesn't just deliver parcels, but delivers trust, speed.
+                                    It started with a missed birthday gift. A parcel filled with love and thoughtful surprises meant for a loved one in another country—delayed, damaged, and utterly disappointing. If you’ve ever experienced this, you know the frustration all too well. That’s when many of us start searching for a better option—a service that doesn't just deliver parcels, but delivers trust.
                                     </h2>
                                 </a>
                                 <a className="red-ores" href="blog/5-signs-you’re-using-the-best-international-parcel-service-in-UAE">

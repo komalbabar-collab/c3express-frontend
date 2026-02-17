@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import logo from "../../../src/assets/settings/footerlogo.png"
+import logo from "../../../public/logo/logo.png"
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -75,7 +75,7 @@ const Header = () => {
                   <Nav.Link className={`${location === "/OurGallery" ? 'active_url' : ''}`}>
                     <Link to="/OurGallery" >MEDIA</Link>
                   </Nav.Link>
-                  <Nav.Link className={`${location === "/Contact" ? 'active_url' : ''}`}>
+                  <Nav.Link className={`${location === "/contact-us" ? 'active_url' : ''}`}>
                     <Link to="/Contact" >CONTACT</Link>
                   </Nav.Link>
                   <Nav.Link className={`${location === "/Deliveryservice" ? 'active_url' : ''}`}>

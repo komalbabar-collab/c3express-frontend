@@ -46,21 +46,22 @@ const Signsfor = ({ pageURL }) => {
             </Helmet>
             <Header1 />
             <div className="p-inner_head p-inner_contact">
-                <div className="p-page_title">
                     <div className="container">
+                         <h1 className="p-page-title">5 Signs You’re Using the Best International Parcel Service In UAE</h1>
+               
                         <ul className="p-breadcrumb">
                             <li>
-                                <a href="https://c3xpress.com/">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li>
-                                <span>Blogs</span>
+                                /  <a href="/blog">Blogs</a>
                             </li>
                             <li>
                                 <span>5 Signs You’re Using the Best International Parcel Service In UAE</span>
                             </li>
                         </ul>
                     </div>
-                </div>
+                
             </div>
             <Container>
                 <Row>
