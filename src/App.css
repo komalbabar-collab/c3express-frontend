@@ -1409,9 +1409,13 @@ a:hover {
         margin-top: 1rem !important;
     }
 
+    #trackingResultDiv{
+        margin-top: 10px;
+    }
 
     .summary-forbss {
-        margin-top: 180px;
+        /* margin-top: 180px; */
+        margin-top: 30px;
     }
 
     button.btn.btn-tracking {
