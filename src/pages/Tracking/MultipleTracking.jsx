@@ -67,7 +67,7 @@ const MultipleTracking = () => {
           id="airWayBillNo"
           value={TrackingData.airWayBillNo}
           onChange={handleChange}
-          placeholder="Enter reference no. ,one per line"
+          placeholder="Enter reference number, one per line"
           required=""
           defaultValue={""}
           rows={1}

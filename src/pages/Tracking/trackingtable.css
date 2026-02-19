@@ -170,7 +170,7 @@
 /* listing css */
 .shipment-details-wrapper {
   /* margin-top: 12px; */
-  margin:12px 25% 0px 25%
+  margin:12px 8% 0px 8%
 }
 
 @media (max-width: 768px) {
@@ -216,3 +216,11 @@
 }
 
 /* table */
+.progress-step:last-child.done.current .step-circle {
+  background: #28a745;
+  box-shadow: 0 0 0 6px rgba(40,167,69,0.25);
+}
+
+.progress-step:last-child.done.current .step-label {
+  color: #28a745;
+}

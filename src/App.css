@@ -1264,37 +1264,42 @@ a:hover {
 @media (max-width: 767px) {
     .round-cornner_cs3 {
         margin-top: 1em;
+        width: 100% !important;
     }
 }
 
 @media (max-width: 639px) {
     .round-cornner_cs3 {
         margin-top: 1em;
+        width: 100% !important;
     }
 }
 
 @media screen and (max-width: 580px) {
     .round-cornner_cs3 {
         margin-top: 1em;
+        width: 100% !important;
     }
 }
 
 @media (max-width: 480px) {
     .round-cornner_cs3 {
         margin-top: 1em;
+        width: 100% !important;
     }
 }
 
 @media (max-width: 667px) {
     .round-cornner_cs3 {
         margin-top: 1em;
+        width: 100% !important;
     }
 }
 
 /*! CSS Used from: https://c3xpress.com/assets/customer/css/style.css */
 .round-cornner_cs3 {
     /* width: 100%; */
-    width:50%;
+    width:65%;
     height: 100%;
     border-radius: 6px;
     background: rgb(63, 110, 222);
@@ -5113,6 +5118,7 @@ a.red-ores {
 /* new Form UI  */
 .tracking-tabs {
   border-bottom: 2px solid #ddd;
+  justify-content:space-between;
 }
 
 .tab-item {
@@ -5121,6 +5127,7 @@ a.red-ores {
   font-weight: 600;
   border-bottom: 3px solid transparent;
   color: #555;
+  width:50%;
 }
 
 .tab-item.active {
@@ -5148,7 +5155,7 @@ border-radius : 5px;
 }
 
 .md-input-wrapper input {
-    font-size:smaller !important;
+    /* font-size:smaller !important; */
 }
 
 .md-form-control {

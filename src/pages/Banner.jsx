@@ -114,28 +114,7 @@ const Banner = (props) => {
                   >
                     Book a shipment
                   </button>
-                  {/* {isPopupOpen && (
-                    <div className="popup-box text-center">
-                      <button
-                        type="button"
-                        className="btn btn-tracking bg-blue pr-3 pl-3 mt-2 " 
-                      >
-                        <Link to="/Bookshipment"style={{color:"white"}} > Sign in as Guest</Link>
-                      </button>
-
-                      <div className="p-2">OR</div>
-                      <button
-                        type="button"
-                        className="btn btn-tracking bg-blue pr-3 pl-3 mt-2"
-                        style={{ color: "white", borderRadius: "22px" }}
-                      >
-                        Sign up for New Account
-                      </button>
-                      <span className="close" onClick={closePopup}>
-                        &times;
-                      </span>
-                    </div>
-                  )} */}
+             
                   <div>
                     {showModal && (
                       <div

@@ -9,9 +9,24 @@ import Services from "./Services"
 import Solutions from "./Solutions"
 import Visionandmission from "./Visionandmission"
 import { Helmet } from "react-helmet-async"
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setTrackingDetails } from "../redux/reducers/TrackingDetailsReducer";
+
+
 const Home = (props) => {
 
-  
+   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setTrackingDetails({
+      data: [],
+      error: false,
+      loading: false,
+      message: ""
+    }));
+  }, []);
+
   return (
     <div>
       <Helmet>
