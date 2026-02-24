@@ -103,10 +103,10 @@ const InternationalRatefinder = () => {
                 {/* <h3>Rate Calculator
                 </h3> */}
 
-                <div style={{ paddingTop: "70px" }} className="p-page_inner contact_page_cover">
+                <div  className="p-page_inner contact_page_cover int_ratefinder">
                     <Link to={"/"}>
 
-                        <img style={{ marginLeft: '20px', width: '100px' }} src={logo} />
+                        {/* <img style={{ marginLeft: '20px', width: '100px' }} src={logo} /> */}
                     </Link>
 
                     <div className="container p-content_section p-contact">

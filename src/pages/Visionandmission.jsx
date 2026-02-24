@@ -9,12 +9,12 @@ const Visionandmission = () => {
                     <div className="container">
                         <div className="mission">
                             <div className="row">
-                                <div className="col-lg-3">
+                                <div className="col-lg-3 icon-blob">
                                 <img src={Mission} />
                                 </div>
                                 <div className="col-lg-3">
                                     <h1>Vision</h1>
-                                    <p>
+                                    <p style={{textAlign:"justify"}}>
                                         To be the premier global courier company, connecting people,
                                         businesses, and communities through seamless and reliable
                                         logistics solutions.
@@ -25,7 +25,7 @@ const Visionandmission = () => {
                                 </div>
                                 <div className="col-lg-3">
                                     <h1>mission</h1>
-                                    <p>
+                                    <p style={{textAlign:"justify"}}>
                                         Our mission is to provide efficient, secure, and innovative
                                         courier services that exceed customer expectations.
                                     </p>

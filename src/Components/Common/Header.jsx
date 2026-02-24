@@ -91,7 +91,7 @@ const Header = () => {
         </div>
       </div>
       <div className="ruler" />
-      {window.location.pathname !== "/Ratefinder" && window.location.pathname !== "/Bookshipment" && (<div className={`top_fixedheader ${isSticky ? 'sticky' : ''}`}>
+      {window.location.pathname !== "/Bookshipment" && (<div className={`top_fixedheader ${isSticky ? 'sticky' : ''}`}>
         {['md'].map((expand) => (
           <Navbar key={expand} expand={expand}>
             <Container>

@@ -108,7 +108,7 @@ const DomesticRatefinder = () => {
                 <div style={{ paddingTop: "70px" }} className="p-page_inner contact_page_cover">
                     <Link to={"/"}>
 
-                        <img style={{ marginLeft: '20px', width: '100px' }} src={logo} />
+                        {/* <img style={{ marginLeft: '20px', width: '100px' }} src={logo} /> */}
                     </Link>
 
                     <div className="container p-content_section p-contact">

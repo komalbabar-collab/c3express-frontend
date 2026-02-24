@@ -5,7 +5,7 @@ import msa4 from "../assets/images/clients/444.jpg";
 import msa5 from "../assets/images/clients/555.jpg";
 import msa6 from "../assets/images/clients/666.jpg";
 import msa7 from "../assets/images/clients/888.jpg";
-import logo from "../assets/images/logo.png"
+import logoc3x from "../assets/images/Untitled-design.png";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -15,7 +15,7 @@ const Groupofcompanies = () => {
         autoplay: true,
         loop: true,
         dots: false,
-        margin: 20,
+        margin: 5,
         nav: true,
         lazyLoad: true,
         responsive: {
@@ -29,7 +29,7 @@ const Groupofcompanies = () => {
                 items: 1,
             },
             1000: {
-                items: 3,
+                items: 5,
             },
         },
     };
@@ -164,7 +164,7 @@ const Groupofcompanies = () => {
                                         <a href="javascript:">
                                             <img
                                                 className="img-fluid c3xlogoooo"
-                                                src={logo}
+                                                src={logoc3x}
                                                 alt=""
                                             />
                                             <div className="services p-2 minht">
