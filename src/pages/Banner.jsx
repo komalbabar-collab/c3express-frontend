@@ -50,7 +50,7 @@ const Banner = (props) => {
                               setMultipleChange(false);
                             }}
                           >
-                            Single Tracking Number
+                            Tracking Number
                           </div>
 
                           <div className={`tab-item ${MultipleChange ? "active" : ""}`}

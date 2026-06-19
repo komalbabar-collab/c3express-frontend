@@ -240,12 +240,12 @@ const Dashboard = () => {
                               {data[0] + data[1] + data[2]}
                             </div>
 
-                            <div className="stats-progress">
+                            {/* <div className="stats-progress">
                               <div
                                 className="stats-progress-fill orange"
                                 style={{ width: `${(data[0] / (data[0] + data[1] + data[2])) * 100}%` }}
                               ></div>
-                            </div>
+                            </div> */}
 
                             <div className="stats-footer">
                               <span>Delivered: {data[0]}</span>
@@ -265,12 +265,12 @@ const Dashboard = () => {
 
                             <div className="stats-value">{pickedupudata[0]}</div>
 
-                            <div className="stats-progress">
+                            {/* <div className="stats-progress">
                               <div
                                 className="stats-progress-fill blue"
                                 style={{ width: "70%" }}
                               ></div>
-                            </div>
+                            </div> */}
 
                             <div className="stats-footer">
                               <span>Completed: {pickedupudata[1]}</span>
@@ -308,12 +308,12 @@ const Dashboard = () => {
                                           <span className="progress-value">{percent}</span>
                                         </div>
 
-                                        <div className="progress-track">
+                                        {/* <div className="progress-track">
                                           <div
                                             className={`progress-fill ${index === 0 ? 'booking' : index === 1 ? 'completed' : 'pending'}`}
                                             style={{ width: `${percent}%` }}
                                           ></div>
-                                        </div>
+                                        </div> */}
                                       </div>
                                     );
                                   })}
